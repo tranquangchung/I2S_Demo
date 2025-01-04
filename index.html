@@ -25,13 +25,18 @@
 <article itemscope itemtype="https://schema.org/BlogPosting">
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h1 id="introduction" style="text-align: center;">
+    Dual-Guidance with Saliency and Acoustic for <br>
+    Image-to-Speech Generation
+	</h1>
+	<p style="text-align: center;"> <b>Chung Tran (tran.quang_chung.tq9@naist.ac.jp)</b>, <b>Sakriani Sakti (ssakti@is.naist.jp)</b>
 </div>
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h4 id="samples" style="text-align: center;"> &lt;Samples from the COCO captioning dataset&gt; </h4>
 	<p style="text-align: center; vertical-align: middle;">
-	<b><sup>*</sup></b> SAT-VQ3-FT used an ASR model trained on reconstructed audio features to correct unclear words.
-	<br> In our approach, audio was decoded using beam search (beam size 5) and transcribed with an off-the-shelf ASR model. However, the ASR made errors, such as transcribing "bowl/bawl" instead of "ball" and "refragerator" instead of "refrigerator."
+	<br> Audio is transcribed using an off-the-shelf ASR model. <br>
+		However, the ASR introduces errors, such as transcribing "bowl/bawl" instead of "ball" and "refragerator" instead of "refrigerator."
 	<br> <b><span style="color: red;">Therefore, we strongly recommend listening to the audio rather than reading the text. </span></b>
 	</p>
 	<div class="table-responsive">
@@ -42,7 +47,7 @@
 					<th style="text-align: center">Image</th>
 					<th style="text-align: center">SAT-VQ3-FT</th>
 					<th style="text-align: center">Im2Sp</th>
-					<th style="text-align: center">Ours</th>
+					<th style="text-align: center">Ours (ViSA-Vox)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -317,7 +322,7 @@
 					<th style="text-align: center">Image ID</th>
 					<th style="text-align: center">Image</th>
 					<th style="text-align: center">Im2Sp</th>
-					<th style="text-align: center">Ours</th>
+					<th style="text-align: center">Ours (ViSA-Vox)</th>
 				</tr>
 			</thead>
 			<tbody>
