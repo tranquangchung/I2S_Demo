@@ -1,0 +1,201 @@
+COCO_val2014_000000419344|so ga san n to narande aruite iru
+COCO_val2014_000000177838|pasokonn no yoko ni tabekake no soseji ga haitte iru
+COCO_val2014_000000567863|ookina kirinto chiisanari ga pin to aruite iru
+COCO_val2014_000000048129|meeka den wo kaketa dansei ga ke ki wo kuete iru
+COCO_val2014_000000011156|eki to no ue ni bakku no nakami ga notte iru
+COCO_val2014_000000157019|ame no naka wo kasa wo sashita josei ga aruite iru
+COCO_val2014_000000022176|hiroi kuruma no mae ni dansei ga iru
+COCO_val2014_000000333746|kiiro to a no rain ga haitta densha ga fumikiri wo hashitte iru
+COCO_val2014_000000307292|zu no dansei ga waratte iru
+COCO_val2014_000000137221|yakyuu no shiai de bataa ga bat to futte iru
+COCO_val2014_000000268322|ren rakutsuki no beddo no mawari ni shiroi kaaten ga aru
+COCO_val2014_000000002225|onnanoko ga oishi so ni doo na wo tsukonde iru
+COCO_val2014_000000384822|taira no ue ni piza- ga ichimai notte iru
+COCO_val2014_000000008612|bu no nagai chairo no utsuwa gawa to kochira wo mite iru
+COCO_val2014_000000516786|kagami ni utsutta jibun no sugata wo kagami ni utsutte iru
+COCO_val2014_000000299023|kigyou wo hayashita dansei ga mikisa wo tsukatte ryouri wo shite iru
+COCO_val2014_000000358301|eki no hoomu ni densha gatteeisha shite iru
+COCO_val2014_000000163348|ue no ue ni pasokon to denwa ga oite aru
+COCO_val2014_000000168093|saafin wo shite iru hito ga nami ni notte iru
+COCO_val2014_000000240637|eki tto no ue de neko ga maru mawatte nete iru
+COCO_val2014_000000406744|tori ga san hiki ?? ni itatte iru
+COCO_val2014_000000432234|kuma no nuigurumi ga isu ni suwatte iru
+COCO_val2014_000000356500|yuki no ue ni yoshimi wo tatekakete aru
+COCO_val2014_000000070280|tori ga zu naka hamakan wo aruite iru tokoro ni tori kou e
+COCO_val2014_000000257992|yakyuu no shiue de pitchaa ga booru wo nagete iru
+COCO_val2014_000000262440|hiroi basutabu no gawa ni shiroi genki ga aru
+COCO_val2014_000000202040|akai baiku ga douro ni tomatte iru
+COCO_val2014_000000503311|nami yuki made safu boodo wo motte aruite iru hito ga iru
+COCO_val2014_000000188173|kiri eru ?? ni shi u no oyako ga iru
+COCO_val2014_000000094055|midori no fuku wo kita dansei ga ma ni notte iru
+COCO_val2014_000000077689|kuruma no saidomira ni ga utsutte iru
+COCO_val2014_000000045108|jiro shi no ue ni neko gai wo kota watte iru
+COCO_val2014_000000136680|akai niga wo haite iru hito no moto ni kutsu wo haite iru hito no ashi ni yanachou re yai ma
+COCO_val2014_000000115118|karafuru na ka mo ressha ga tenro wo hashitte iru
+COCO_val2014_000000434915|heya no naka ni toranku ga okarete iru
+COCO_val2014_000000550422|tara no naka de hitsuji ga kusa wo tabete iru
+COCO_val2014_000000226498|ji< unk>sei no ue de sakkaa wo shite iru hitotachi ga iru
+COCO_val2014_000000357542|yuki nochi san nhiki no inu ga suwatte iru
+COCO_val2014_000000388487|sa no naka ni takusan no hito ga tatte iru
+COCO_val2014_000000333286|midoriiro no shitsu wo kita dansei ga hitsuji no ke wo katte iru
+COCO_val2014_000000391006|kanetsune ni hikou ki ga tomatte iru
+COCO_val2014_000000167510|akairo no sutoppu to kakareta kanbangatte iru
+COCO_val2014_000000148568|yoshichika ga to doko no kono kao wo nagamete iru
+COCO_val2014_000000429593|heya no naka ni sofaaiateeeburu ga okarete iru
+COCO_val2014_000000020598|kodomotachi ga piizaa wo tabete iru
+COCO_val2014_000000425620|minami dan beto no ue ni kodomo ga suwatte iru
+COCO_val2014_000000290839|aoi boodo no ushiro ni dansei to inu ga notte iru
+COCO_val2014_000000399991|yakyuu senshu ga booru wo nageyou to shite iru
+COCO_val2014_000000170211|dansei to joseigari moko wo motte gemu shite iru
+COCO_val2014_000000161185|eki no hoomu ni densha ga tomatte iru
+COCO_val2014_000000229267|bara saru no shita ni teeburu to isu ga ooite aru
+COCO_val2014_000000471642|densha no naka de dansei ga kazu ni itatte iru
+COCO_val2014_000000577160|hiroi< unk> no ue ni ryouri ga moritsukerarete iru
+COCO_val2014_000000393004|hiroi fuku wo kita josei ga den ni wo shite iru
+COCO_val2014_000000324189|samera no naka ni tori ga tome mawatte iru
+COCO_val2014_000000152525|ao shingou no muko ni takusan no kuruma ga tomatte iru
+COCO_val2014_000000571876|ta sa no nomimono to nomimono ga oite aru
+COCO_val2014_000000077360|pinku iro no tatemono no mae wo uchi ga aruite iru
+COCO_val2014_000000289630|densha no kabe ni rakugaki ga sarete iru
+COCO_val2014_000000396691|tayori no josei ga kicchin de ryouri wo shite iru
+COCO_val2014_000000014723|yukiyama de noo boodo wo shite iru dansei ga iru
+COCO_val2014_000000124930|furu sa do ni takusan no hitotachi ga tatte iru
+COCO_val2014_000000129852|kubi suri wo nagete iru hito de aru
+COCO_val2014_000000131497|ooshio ka maitai no gai wo ni natte iru
+COCO_val2014_000000410979|samazama na shurui no donatsu ga narande iru
+COCO_val2014_000000039606|ge tou bodo ni notta hito de aru
+COCO_val2014_000000369373|tayoru no dansei ga terebi geemu wo shite iru
+COCO_val2014_000000366830|rin no naka ni chairoi katachi tte iru
+COCO_val2014_000000412184|kanetsune ni hikou ki ga tomatte iru
+COCO_val2014_000000426878|ge tou bodo ni notta hito de aru
+COCO_val2014_000000442463|ge tou bodo ni no dainin de aru
+COCO_val2014_000000322175|kinou banjou ni kudamono ga notte iru
+COCO_val2014_000000058425|akai fuku wo kita josei ga shokuji wo shite iru
+COCO_val2014_000000452784|orenji iro no sara no ue ni midoriiro no nohira ga notte iru
+COCO_val2014_000000556608|chokoreetokeki no ue ni chokoreeto ga notte iru
+COCO_val2014_000000115241|kinou ita no ue ni pii ga naotte iru
+COCO_val2014_000000452084|kuroi sora no ue ni shokuzai ga notte iru
+COCO_val2014_000000360818|kodomo ga isu ni suwatte kochira wo mite iru
+COCO_val2014_000000438850|hiroi to no ue ni tokei ga kakerarete iru
+COCO_val2014_000000376677|toraggu no ushiro ni gomi shitchuu sha ga tomatte iru
+COCO_val2014_000000359465|saafin wo shite iru hito ga nami ni notte iru
+COCO_val2014_000000437126|shin no neko ga kochira wo muite iru
+COCO_val2014_000000474934|sannin no dansei ga nakama wo sanpo shite iru
+COCO_val2014_000000352901|hatake ni natte iru midori no yasai ga takusan tsuite iru
+COCO_val2014_000000147725|hiroi dorakku ga shi dou wo hashitte iru
+COCO_val2014_000000258883|babekiguriru de chouri sareta zousei koto wo tsukutte iru
+COCO_val2014_000000125472|keitou bodo ni notta hito de aru
+COCO_val2014_000000555337|oku souchi ni chairoi uchigawa ni to iru
+COCO_val2014_000000023802|kouki no mae ni dansei ga tatte iru
+COCO_val2014_000000046761|sougen ni shiroi tori ga kuta no naka wo aruite iru
+COCO_val2014_000000016241|kousou biru gatanami bumachi no mushi gyouki gyou ki ga tonde iru
+COCO_val2014_000000443299|genchi ni suwatta danjo ga keitai denwa wo mite iru
+COCO_val2014_000000467540|tsugi i shatsu wo kita dansei ga fune ni notte iru
+COCO_val2014_000000439781|< unk> no naka ni zou ga yontou wo aruite iru
+COCO_val2014_000000469803|aka to chiro no< unk> katen ga michi wo ue ni aru
+COCO_val2014_000000117432|uma ni notta hito ga mizube ni tatte iru
+COCO_val2014_000000178796|shoku no naka de kirin ga esa wo tabete iru
+COCO_val2014_000000381032|josei no tenisu pureya ga booru wo uchi kae soto shite iru
+COCO_val2014_000000529668|kuroi fuku wo kita josei ga kaban wo motte iru
+COCO_val2014_000000083059|akai ta no aru heya ni iga ikutsu ka wo ite aru
+COCO_val2014_000000379108|taira no dansei ga mizu no ue ni tatte iru
+COCO_val2014_000000436348|aoi fuku wo kita dansei ga shiroi bara saru wo tatete iru
+COCO_val2014_000000489611|otokonoko ga ge mu wo shite iru
+COCO_val2014_000000281008|kuroi beddootsu wo kita dansei ga saafin wo shite iru
+COCO_val2014_000000035195|naka hamakan ni shiroi kamome ga tobita touu to shite iru
+COCO_val2014_000000261471|hiroi douro wo takusan no baiku ga hashitte iru
+COCO_val2014_000000187001|kitchin de dansei ga isu ni suwatte iru
+COCO_val2014_000000496213|zu retsu no dansei ga shouzou de kochira wo mite iru
+COCO_val2014_000000294134|hiroi dorakku ga douro wo hashitte iru
+COCO_val2014_000000417164|yuki no tsumotta koin paakingu no mae ni tatte iru
+COCO_val2014_000000419723|sarada to sandoitchi ga raku ni morarete iru
+COCO_val2014_000000085329|wa no nagai josei ga ne ku ta i wo shite iru
+COCO_val2014_000000438221|mizu no naka ni kuroi tori ga ni tomatte iru
+COCO_val2014_000000200717|kubi isu bin ri wo nageyou to shite iru dansei ga iru
+COCO_val2014_000000448278|mizube ni takusan no< unk>gatte iru
+COCO_val2014_000000344930|ho ro< unk> no shibafu ni tatsura shoukasen ga tatte iru
+COCO_val2014_000000222370|hiroi tatemono no mae ni baiku ga suu dai to mawatte iru
+COCO_val2014_000000388658|biido wo tsuketai inu ga neko no gawa ni suwatte iru
+COCO_val2014_000000208623|dansei to josei ga no -topasokon wo sousa shite iru
+COCO_val2014_000000503826|ue no ue ni pasokon to mausu ga oite aru
+COCO_val2014_000000089500|yama no naka no michi wo hashitte iru shiroi densha ga hashitte iru
+COCO_val2014_000000465069|hiroi reizouko no ue ni shii ga hatte aru
+COCO_val2014_000000494404|jinkouki no mukogawa ni mizu no naka ni haitte iru
+COCO_val2014_000000205577|reizouko ni takusan no magunetto ga hararete iru
+COCO_val2014_000000050230|ke ki no ue ni kazararete iru ninjidoshiro no de koree ari nsu de aru
+COCO_val2014_000000388643|kouki no mado kara hikou ki ga tonde iru
+COCO_val2014_000000244240|yousu toi re no beza ga hiraite iru
+COCO_val2014_000000251857|mou mitsuru bodo ni notta hito de aru
+COCO_val2014_000000034180|banana nobou ko wo kabutta dansei ga aratte iru
+COCO_val2014_000000153782|hiroi mono no mae ni machi itougatte iru
+COCO_val2014_000000256003|omochi no densha ga tenro no ude wo hashitte iru
+COCO_val2014_000000311922|syangurasu kaketa josei ga nekutai wo shite iru
+COCO_val2014_000000567329|youkei wo shita dansei ga bedo no ue ni tatte iru
+COCO_val2014_000000569969|mou mitsuru bodo ni notta hito de aru
+COCO_val2014_000000449872|chuushajou ni kuruma ga takusan to mawatte iru
+COCO_val2014_000000163684|yuki no tsumotta kono eda wo kuete iru inu ga iru
+COCO_val2014_000000250311|kitchin no konro ni wa furaipan ga tsubusarete iru
+COCO_val2014_000000120977|machi no mieru machi no kou ni to sakaidaigatte iru
+COCO_val2014_000000311394|akachan ga ha burashi wo motte iru
+COCO_val2014_000000160195|ge tou bodo ni notta hito de aru
+COCO_val2014_000000542077|ate ni shingou ki ga yon oonarande iru
+COCO_val2014_000000525376|kuruma no toranku ni kusakku ga tsumarete iru
+COCO_val2014_000000176863|ito no kyouma u na kusa wo tabete iru
+COCO_val2014_000000512576|kitchin no mannaka ni gurasu ga oite aru
+COCO_val2014_000000069757|joseitachi ga keiki wo kiriwakete iru
+COCO_val2014_000000267408|dansei to josei ga terebi wo mite iru
+COCO_val2014_000000487450|kuroi baiku ni futarinori wo shite iru hito ga iru
+COCO_val2014_000000191240|ka ni kiiroi hana ga hirakirarete iru
+COCO_val2014_000000309120|midoriiro no yunooma kita dansei ga sakkaa booru wo ukegete iru
+COCO_val2014_000000023320|hiro ita no ue ni chokoreetoke ki ga aru
+COCO_val2014_000000303893|rai no kodomo ga doonatsu wo tabete iru
+COCO_val2014_000000193015|kitchin no mannaka ni banana na oite aru
+COCO_val2014_000000410885|nami ni takusan no hito ga atsumatte iru
+COCO_val2014_000000201916|suji ga noma ni tatte iru yousu kuro iki suji kae iru
+COCO_val2014_000000492552|zugata no dansei ga kabe no mae ni tatte iru
+COCO_val2014_000000167544|ao to chiro no hikou ki ga sora otonde iru
+COCO_val2014_000000084889|hyakusa no kudamono ga urarete iru
+COCO_val2014_000000200401|jitensha ni notta dansei ga jitensha ni notte iru
+COCO_val2014_000000179285|te hi dake tto no ue ni booru ga notte iru
+COCO_val2014_000000319024|reizouko no naka ni onnanoko ga haitte iru
+COCO_val2014_000000069138|aka shingou no shingou ga ni natte iru
+COCO_val2014_000000051250|ki no chikaku ni chairoi ga tatte iru
+COCO_val2014_000000189566|terebi no gamen ni josei to dansei ga utsutte iru
+COCO_val2014_000000484681|akai fuku wo kita kodomo ga kaban wo motte iru
+COCO_val2014_000000334371|i kaitate no basu ga douro wo hashitte iru
+COCO_val2014_000000279524|hiroi kabe no heya ni terebi to sofaa ga aru
+COCO_val2014_000000318080|mito no kuma ga mizu no naka ni haitte iru
+COCO_val2014_000000534605|kuroi fuku wo kita dansei ga baku no mae ni tatte iru
+COCO_val2014_000000421195|hiroi sougen no naka ni hitsuji ga tsuu to kochira wo mite iru
+COCO_val2014_000000162398|ie e no nekuta wo kazararete iru dansei ga iru
+COCO_val2014_000000010707|tayori no dansei ga terebi geemu wo shite iru
+COCO_val2014_000000324250|kuma no nuigurumi ga kappu no naka ni oke okarete iru
+COCO_val2014_000000024805|fupandaagai yuki ga tsumotte iru mado no soto ni yuki ga tsumotte iru
+COCO_val2014_000000460379|giri ga satosa wo tabete iru
+COCO_val2014_000000322369|keeburu no ue ni tabe ka ke no hanbaagaado nomimono ga oite aru
+COCO_val2014_000000007556|umi no ue ni takusan no kaku to ga tonde iru
+COCO_val2014_000000566717|kouibasutaabu no naka ni neko ga haitte iru
+COCO_val2014_000000152388|tori ga san hiki takusan no tori no ushiro ni tomatte iru
+COCO_val2014_000000535306|keitou bon do ni no dainin de aru
+COCO_val2014_000000560623|mado no soto ni takusan no hikou ki ga tomatte iru
+COCO_val2014_000000125815|eki no hoomu ni densha ga tomatte iru
+COCO_val2014_000000094157|tokeidai no tokei wa ichiji juu hachi fun wo sashite iru
+COCO_val2014_000000453903|kuukou no nimotsu ke to issho ni hitogatte iru
+COCO_val2014_000000497094|kuroi kuku ga aoi kutsuu ku ga yorisotte iru
+COCO_val2014_000000545867|bokujou de takusan no gaku wo tabete iru
+COCO_val2014_000000010526|ge tou bodo ni notta hito de aru
+COCO_val2014_000000288799|aka ire kuruma ga sen no wo hashitte iru
+COCO_val2014_000000299448|eki no hoomu ni densha ga tomatte iru
+COCO_val2014_000000200250|doraggu no ushiro ni takusan no hito ga tatte iru
+COCO_val2014_000000325211|nootopatokoo no yoko ni hon to mizuiro no tsukue no ue ni hon ga okarete iru
+COCO_val2014_000000242423|inin no yasai ga tsuinetsu sarete iru
+COCO_val2014_000000282098|machikado ni suwatte iru hito no ushiro ni kanban ga aru
+COCO_val2014_000000174672|kitchin no ko do dai no ue ni oke okarete iru
+COCO_val2014_000000232348|kic chi no konro ni wa mikisaa ga okarete iru
+COCO_val2014_000000421564|akachan ga ke ki wo basu de ke oyobi hatte iru
+COCO_val2014_000000245067|saa fii wo shite iru dansei garyuu
+COCO_val2014_000000502766|toori hashitte iru dansei ga ni hiki ren kete iru
+COCO_val2014_000000224377|aoi yunooma kita josei ga sofutobooru wo motte iru
+COCO_val2014_000000556341|shima no mae ni tatte iru dansei ga iru
+COCO_val2014_000000128812|kitchin no konro ni ya gan ga wo okarete iru
+COCO_val2014_000000224742|sen men dai no yoko ni dan booru ga okarete iru

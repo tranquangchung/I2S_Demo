@@ -1,0 +1,200 @@
+COCO_val2014_000000000042|a small white bear sitting inside of a white basket
+COCO_val2014_000000000359|a traffic light with the city skyline in the background
+COCO_val2014_000000000636|a white toilet with a window in a bathroom
+COCO_val2014_000000000711|a living room with a couch a table and a coffee table
+COCO_val2014_000000000810|a sandwich in a basket on a table in a restaurant table
+COCO_val2014_000000000974|a family riding an elephant's back on a chair
+COCO_val2014_000000001146|a man wearing a tie wearing glasses and a tie
+COCO_val2014_000000001180|a woman standing in front of a cake with a large party
+COCO_val2014_000000001290|a baby sitting in front of a cake with candles
+COCO_val2014_000000001353|two young children sitting in a red-covered basket sitting in a room
+COCO_val2014_000000001393|a vase filled with flowers sitting on top of a table
+COCO_val2014_000000001425|a sandwich on a white plate with a cup of coffee
+COCO_val2014_000000001448|a giraffe eating grass on a grass field
+COCO_val2014_000000001573|a kitchen with a stove top oven and a couple of pots
+COCO_val2014_000000001590|a white truck with many stacks of items on the back of a truck
+COCO_val2014_000000001626|to young man playing we in a living room
+COCO_val2014_000000001655|a man taking a photo of a mountain with a cell phone in the background
+COCO_val2014_000000001682|a small boat is in the water with mountains in the back row
+COCO_val2014_000000001700|a man riding his snowboard down a snow-covered slope
+COCO_val2014_000000001757|two women sitting at a table with glasses of wine
+COCO_val2014_000000002142|a man sitting on a bench on a sidewalk
+COCO_val2014_000000002225|a little girl eating a piece of food from a table
+COCO_val2014_000000002240|a bunch of stuffed animals in a box
+COCO_val2014_000000002295|a black and white cat standing in a wooden bowl
+COCO_val2014_000000002453|a bench is in the water near the water
+COCO_val2014_000000002690|a bunch of boats sitting in the water next to the ocean
+COCO_val2014_000000002753|a brown and white dog holding a yellow frisbee in its mouth
+COCO_val2014_000000002759|a wooden table topped with a bowl of soup and broccoli
+COCO_val2014_000000002822|a red stop sign sitting in the middle of a field
+COCO_val2014_000000002867|a group of people riding skis on a snowy surface
+COCO_val2014_000000002890|a woman walking down a snowy street with the child on skis
+COCO_val2014_000000003001|a woman is making a donut on a table
+COCO_val2014_000000003103|a man riding a skateboard on a ram
+COCO_val2014_000000003156|a man sitting on a toilet in a bathroom
+COCO_val2014_000000003382|military sailors in an airport looking at a laptop
+COCO_val2014_000000003590|a man walking in the rain with an umbrella
+COCO_val2014_000000003716|a woman sitting on a couch with a laptop in her lap
+COCO_val2014_000000003832|a small boat is in the water near mountains
+COCO_val2014_000000004069|two bikers riding down the road next to a woman
+COCO_val2014_000000004125|a living room with a couch a table and a coffee table
+COCO_val2014_000000004246|a man and a woman walking down a sidewalk next to a street sign
+COCO_val2014_000000004312|a man taking a picture of a pizza with a pizza
+COCO_val2014_000000004359|a woman waiting for the train at a station
+COCO_val2014_000000004760|a yellow fire hydrant sitting in the middle of a parking lot
+COCO_val2014_000000004916|a woman standing next to a little boy in a bedroom
+COCO_val2014_000000004972|a black and white photo of a woman sitting next to a horse
+COCO_val2014_000000005123|a bus stop sign in front of a fence on a sunny day
+COCO_val2014_000000005154|a bed is made up in a room with a pillow
+COCO_val2014_000000005205|a man and a woman sitting on a motorcycle
+COCO_val2014_000000005388|a baseball game is being played on a baseball field
+COCO_val2014_000000005758|a tall building with a clock on the top of it
+COCO_val2014_000000006040|a white passenger train sitting on the tracks at a station
+COCO_val2014_000000006393|a woman wearing a neckdress holding a pair of scissors
+COCO_val2014_000000006415|a large knife and several carrots on a cutting board
+COCO_val2014_000000006484|a cake on a table with a fork and knife and flowers
+COCO_val2014_000000006861|a white toilet with a white tiled floor
+COCO_val2014_000000006896|a man watches a giraffe at a zoo
+COCO_val2014_000000006921|a woman sitting on a bed working on her laptop
+COCO_val2014_000000007072|a man jumping in the air with a frisbee
+COCO_val2014_000000007088|a small child in a red jacket holding an umbrella
+COCO_val2014_000000007278|a surfer riding a wave in the ocean
+COCO_val2014_000000007288|a white toilet with a white toilet in a bathroom
+COCO_val2014_000000007519|a man in a white hat holding a hot dog in his hands
+COCO_val2014_000000007556|a bunch of kites flying over a body of water
+COCO_val2014_000000007593|a man flying to the air while writing a skateboard
+COCO_val2014_000000007784|a person flying a parachute in a blue sky
+COCO_val2014_000000007795|a bedroom with a large bed and a picture on the wall
+COCO_val2014_000000008179|a traffic light sitting on the side of a road
+COCO_val2014_000000008180|an airplane on the runway at an airport
+COCO_val2014_000000008218|a clock on a tower with a sky background
+COCO_val2014_000000008277|a plate of food with a spoon and a bowl of noodles
+COCO_val2014_000000008483|a man and a woman standing in front of a microphone's behind a painting
+COCO_val2014_000000008493|a man riding a wave on top of a surfboard
+COCO_val2014_000000008612|two animals are standing in a field next to a tree
+COCO_val2014_000000008775|a bedroom with a bed poster on the wall and a pictures on the wall
+COCO_val2014_000000008803|a man talking on a cell phone wall wearing a helmet
+COCO_val2014_000000008888|an airplane sitting on the runway at an airport
+COCO_val2014_000000009002|a pizza is in the middle of a tray on a table
+COCO_val2014_000000009041|a cat standing on a sidewalk with pigeons in the background
+COCO_val2014_000000009156|a sandwich and a cup of coffee on a table
+COCO_val2014_000000009170|a cat sitting on the edge of a toilet
+COCO_val2014_000000009217|a clock tower is in the middle of a building
+COCO_val2014_000000009236|a kitchen with a stove and a dishwasher in it
+COCO_val2014_000000009381|a display case of a line of pizzas on a display
+COCO_val2014_000000009548|two zebras and a field with a baby zebra in the background
+COCO_val2014_000000009647|a man in suits and ty standing in front of a tent
+COCO_val2014_000000009699|a group of large planes sitting on top of an airport runway
+COCO_val2014_000000009727|a snowboarder sitting in the snow with a snowboard in the back row
+COCO_val2014_000000009791|an ornate fashion clock is on display in an ornate fireplace
+COCO_val2014_000000009801|a woman riding a motorcycle with a cat on the back of it
+COCO_val2014_000000009807|a cat looks at a laptop computer
+COCO_val2014_000000009914|a plate with a sandwich and fries on it
+COCO_val2014_000000010014|a man in a blue suit standing next to a bus at a bus stop
+COCO_val2014_000000010104|two men are riding on the back of a motorcycle
+COCO_val2014_000000010115|a small bathroom with a toilet and a sink in it
+COCO_val2014_000000010290|a bathroom with a toilet sink and bathtub
+COCO_val2014_000000010400|a stone building with a clock on the top of it
+COCO_val2014_000000010428|a sink in a room with pictures on the walls
+COCO_val2014_000000010526|a statue of a skateboarder in front of a building
+COCO_val2014_000000010684|a surfer riding a wave in the ocean
+COCO_val2014_000000010707|two young men sitting on a couch playing weak
+COCO_val2014_000000010764|a baseball player is getting ready to catch a ball
+COCO_val2014_000000010825|a person sitting in a car using a cell phone in the passenger seat
+COCO_val2014_000000010837|two soccer players are playing soccer in a field
+COCO_val2014_000000010935|horses in a field with a bunch of elephants grazing in the background
+COCO_val2014_000000011081|an airplane is flying high in the sky
+COCO_val2014_000000011099|a series of photos of people with laptops
+COCO_val2014_000000011115|an older couple holding a white cat in a room
+COCO_val2014_000000011156|the contents of a bed is laying on a table with a purse
+COCO_val2014_000000011181|a woman walking in the rain with a purple umbrella
+COCO_val2014_000000011184|a computer keyboard and mouse on a desk
+COCO_val2014_000000011198|a wooden table topped with plates of food and drinks
+COCO_val2014_000000011209|a man and a woman sitting on a couch playing video games
+COCO_val2014_000000011276|a person standing next to a tray of food on a kitchen counter
+COCO_val2014_000000011625|a man and a woman standing on a beach playing frisbee
+COCO_val2014_000000012085|a man laying in a bed next to a cat
+COCO_val2014_000000012115|a man standing in front of a laptop computer
+COCO_val2014_000000012204|two giraffes are walking in a fenced-in area
+COCO_val2014_000000012471|a small airplane sitting on top of an airport runway
+COCO_val2014_000000012744|three motorcycles parked on the side of a road near mountains
+COCO_val2014_000000012817|a man flying to the air wall riding a skateboard
+COCO_val2014_000000012896|a man riding a bicycle down a sidewalk next to a building
+COCO_val2014_000000012927|a man riding a wave on top of a surfboard
+COCO_val2014_000000013220|three women sitting at a table eating food
+COCO_val2014_000000013466|a street sign on a building next to a statue of a building
+COCO_val2014_000000013490|a cutting board topped with a sandwich and a cutting board
+COCO_val2014_000000013525|a shirtless man laying on a bed with white sheets
+COCO_val2014_000000013882|a black and white cat laying on a tiled floor
+COCO_val2014_000000013985|a man sitting in front of a laptop computer
+COCO_val2014_000000014056|a group of people riding surfboards in the ocean
+COCO_val2014_000000014175|a woman walking down the street next to a blackbird
+COCO_val2014_000000014257|a man walking down a street next to a wall
+COCO_val2014_000000014338|a boat is in the water near the shore
+COCO_val2014_000000014392|a woman holding a baseball bat next to a street sign
+COCO_val2014_000000014450|a truck on a hillside with a couple of people
+COCO_val2014_000000014473|a red and yellow train traveling through a field
+COCO_val2014_000000014713|a living room with a couch a table and a television
+COCO_val2014_000000014723|a snowboarder in an orange jacket is going down a snowy mountain
+COCO_val2014_000000014781|a bathroom with a toilet and a paper tile floor
+COCO_val2014_000000015017|a man standing on a tennis court holding a racket
+COCO_val2014_000000015050|a person riding skis down a snow-covered slope
+COCO_val2014_000000015254|a tray with a bunch of food inside of it
+COCO_val2014_000000015260|a small black inside of a cage with a bird in it
+COCO_val2014_000000015345|a family sitting at a table eating food
+COCO_val2014_000000015667|a yellow fire hydrant sitting on the side of a road
+COCO_val2014_000000016005|a woman holds a child and a cow standing next to a fence
+COCO_val2014_000000016241|an airplane is flying over city skyscrapers
+COCO_val2014_000000016249|two older men sitting on a bench on a sidewalk
+COCO_val2014_000000016491|two baseball players are standing on a baseball field
+COCO_val2014_000000016521|a woman in a purple dress standing next to a bottle of stairs
+COCO_val2014_000000016599|a clock tower in the middle of a city
+COCO_val2014_000000016631|a sign on a street next to a tall building
+COCO_val2014_000000016848|a white plate topped with broccoli and mushrooms
+COCO_val2014_000000016928|a rusted fire hydrant sitting in the middle of a garden
+COCO_val2014_000000016931|a red stop sign sitting on the side of a rote
+COCO_val2014_000000017115|two zebras standing next to each other next to a fence
+COCO_val2014_000000017178|orses walking down a street next to a fence
+COCO_val2014_000000017313|a man and a woman standing in front of a table with a cate
+COCO_val2014_000000017756|a boat with the colorful flags on it in a river
+COCO_val2014_000000017769|a dog sitting on a wooden stand next to a mirror
+COCO_val2014_000000017905|a man standing next to a traffic light
+COCO_val2014_000000017927|a group of young men standing next to each other on a beach
+COCO_val2014_000000017953|a bunch of vegetables on a counter in a kitchen
+COCO_val2014_000000018014|a pizza is in a box on a table
+COCO_val2014_000000018412|a little girl brushing her hair with a brush in her hand
+COCO_val2014_000000018480|a group of people posing for a picture with a frisbee in a field
+COCO_val2014_000000018519|a man riding his skateboard up the side of a rat
+COCO_val2014_000000018687|people sitting on a bench underneath umbrellas
+COCO_val2014_000000018770|a man wearing a suit and tie looking at the camera
+COCO_val2014_000000018771|a train traveling over a bridge over a body of water
+COCO_val2014_000000018975|an airplane on the water with buses and buses
+COCO_val2014_000000019158|a city bus parked on the side of the rote
+COCO_val2014_000000019167|a small round bowl filled with lots of oranges
+COCO_val2014_000000019308|a cat laying on its back holding a pair of scissors
+COCO_val2014_000000019443|an elephant standing next to a wooden fence in the water
+COCO_val2014_000000019455|a room with a television inside of it
+COCO_val2014_000000019888|a bedroom with a bed and a bedroom next to a window
+COCO_val2014_000000019904|two police officers on motorcycles on a city street
+COCO_val2014_000000020111|a man riding a wave on top of a surfboard
+COCO_val2014_000000020179|a man walking on the beach carrying a surfboard
+COCO_val2014_000000020254|a man holding an umbrella in the rain
+COCO_val2014_000000020268|a microwave oven with a toaster oven sitting on a table
+COCO_val2014_000000020276|a man riding a wave on top of a surfboard
+COCO_val2014_000000020305|a man sitting in a chair wall holding a wee remote
+COCO_val2014_000000020381|a train on a train track next to a train station
+COCO_val2014_000000020470|two giraffes are standing in a fenced area
+COCO_val2014_000000020598|a group of young children sitting at a table eating pizza
+COCO_val2014_000000020913|to hot dogs with ketchup and mustard on a plate
+COCO_val2014_000000020992|a woman is eating a banana in a restaurant
+COCO_val2014_000000021198|a woman sitting at a table in a kitchen
+COCO_val2014_000000021202|a traffic light on a city street next to buildings
+COCO_val2014_000000021284|a man riding a wave on top of a surfboard
+COCO_val2014_000000021310|three young girls posing for a picture with a tennis racket
+COCO_val2014_000000021327|a beer sitting on a table next to a glass with a tv
+COCO_val2014_000000021498|a little girl standing on top of a refrigerator 
+COCO_val2014_000000021864|a body of water with the beach covered in surfboard
+COCO_val2014_000000021900|a woman riding on the back of a white horse
+COCO_val2014_000000021979|two men standing on skis in the snow
+COCO_val2014_000000022118|people sitting on the beach watching umbrellas and chairs
+COCO_val2014_000000022158|a kitchen with a stove and microwave in a kitchen

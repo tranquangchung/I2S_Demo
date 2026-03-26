@@ -1,477 +1,872 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="utf-8">
-	<meta name="generator" content="Hugo 0.88.1" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href=""https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
-	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="css/normalize.css">
-
-	<title>Image-to-Speech Captioning: Multimodal-Tokens</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R9MPS52SV"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-6R9MPS52SV');
-	</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Image-to-Speech Captioning Demo</title>
+  <script id="transcript-data">
+  window.TRANSCRIPTS = {
+    en: {
+  "COCO_val2014_000000000042": "a small white bear sitting inside of a white basket",
+  "COCO_val2014_000000000359": "a traffic light with the city skyline in the background",
+  "COCO_val2014_000000000636": "a white toilet with a window in a bathroom",
+  "COCO_val2014_000000000711": "a living room with a couch a table and a coffee table",
+  "COCO_val2014_000000000810": "a sandwich in a basket on a table in a restaurant table",
+  "COCO_val2014_000000000974": "a family riding an elephant's back on a chair",
+  "COCO_val2014_000000001146": "a man wearing a tie wearing glasses and a tie",
+  "COCO_val2014_000000001180": "a woman standing in front of a cake with a large party",
+  "COCO_val2014_000000001290": "a baby sitting in front of a cake with candles",
+  "COCO_val2014_000000001353": "two young children sitting in a red-covered basket sitting in a room",
+  "COCO_val2014_000000001393": "a vase filled with flowers sitting on top of a table",
+  "COCO_val2014_000000001425": "a sandwich on a white plate with a cup of coffee",
+  "COCO_val2014_000000001448": "a giraffe eating grass on a grass field",
+  "COCO_val2014_000000001573": "a kitchen with a stove top oven and a couple of pots",
+  "COCO_val2014_000000001590": "a white truck with many stacks of items on the back of a truck",
+  "COCO_val2014_000000001626": "to young man playing we in a living room",
+  "COCO_val2014_000000001655": "a man taking a photo of a mountain with a cell phone in the background",
+  "COCO_val2014_000000001682": "a small boat is in the water with mountains in the back row",
+  "COCO_val2014_000000001700": "a man riding his snowboard down a snow-covered slope",
+  "COCO_val2014_000000001757": "two women sitting at a table with glasses of wine",
+  "COCO_val2014_000000002142": "a man sitting on a bench on a sidewalk",
+  "COCO_val2014_000000002225": "a little girl eating a piece of food from a table",
+  "COCO_val2014_000000002240": "a bunch of stuffed animals in a box",
+  "COCO_val2014_000000002295": "a black and white cat standing in a wooden bowl",
+  "COCO_val2014_000000002453": "a bench is in the water near the water",
+  "COCO_val2014_000000002690": "a bunch of boats sitting in the water next to the ocean",
+  "COCO_val2014_000000002753": "a brown and white dog holding a yellow frisbee in its mouth",
+  "COCO_val2014_000000002759": "a wooden table topped with a bowl of soup and broccoli",
+  "COCO_val2014_000000002822": "a red stop sign sitting in the middle of a field",
+  "COCO_val2014_000000002867": "a group of people riding skis on a snowy surface",
+  "COCO_val2014_000000002890": "a woman walking down a snowy street with the child on skis",
+  "COCO_val2014_000000003001": "a woman is making a donut on a table",
+  "COCO_val2014_000000003103": "a man riding a skateboard on a ram",
+  "COCO_val2014_000000003156": "a man sitting on a toilet in a bathroom",
+  "COCO_val2014_000000003382": "military sailors in an airport looking at a laptop",
+  "COCO_val2014_000000003590": "a man walking in the rain with an umbrella",
+  "COCO_val2014_000000003716": "a woman sitting on a couch with a laptop in her lap",
+  "COCO_val2014_000000003832": "a small boat is in the water near mountains",
+  "COCO_val2014_000000004069": "two bikers riding down the road next to a woman",
+  "COCO_val2014_000000004125": "a living room with a couch a table and a coffee table",
+  "COCO_val2014_000000004246": "a man and a woman walking down a sidewalk next to a street sign",
+  "COCO_val2014_000000004312": "a man taking a picture of a pizza with a pizza",
+  "COCO_val2014_000000004359": "a woman waiting for the train at a station",
+  "COCO_val2014_000000004760": "a yellow fire hydrant sitting in the middle of a parking lot",
+  "COCO_val2014_000000004916": "a woman standing next to a little boy in a bedroom",
+  "COCO_val2014_000000004972": "a black and white photo of a woman sitting next to a horse",
+  "COCO_val2014_000000005123": "a bus stop sign in front of a fence on a sunny day",
+  "COCO_val2014_000000005154": "a bed is made up in a room with a pillow",
+  "COCO_val2014_000000005205": "a man and a woman sitting on a motorcycle",
+  "COCO_val2014_000000005388": "a baseball game is being played on a baseball field",
+  "COCO_val2014_000000005758": "a tall building with a clock on the top of it",
+  "COCO_val2014_000000006040": "a white passenger train sitting on the tracks at a station",
+  "COCO_val2014_000000006393": "a woman wearing a neckdress holding a pair of scissors",
+  "COCO_val2014_000000006415": "a large knife and several carrots on a cutting board",
+  "COCO_val2014_000000006484": "a cake on a table with a fork and knife and flowers",
+  "COCO_val2014_000000006861": "a white toilet with a white tiled floor",
+  "COCO_val2014_000000006896": "a man watches a giraffe at a zoo",
+  "COCO_val2014_000000006921": "a woman sitting on a bed working on her laptop",
+  "COCO_val2014_000000007072": "a man jumping in the air with a frisbee",
+  "COCO_val2014_000000007088": "a small child in a red jacket holding an umbrella",
+  "COCO_val2014_000000007278": "a surfer riding a wave in the ocean",
+  "COCO_val2014_000000007288": "a white toilet with a white toilet in a bathroom",
+  "COCO_val2014_000000007519": "a man in a white hat holding a hot dog in his hands",
+  "COCO_val2014_000000007556": "a bunch of kites flying over a body of water",
+  "COCO_val2014_000000007593": "a man flying to the air while writing a skateboard",
+  "COCO_val2014_000000007784": "a person flying a parachute in a blue sky",
+  "COCO_val2014_000000007795": "a bedroom with a large bed and a picture on the wall",
+  "COCO_val2014_000000008179": "a traffic light sitting on the side of a road",
+  "COCO_val2014_000000008180": "an airplane on the runway at an airport",
+  "COCO_val2014_000000008218": "a clock on a tower with a sky background",
+  "COCO_val2014_000000008277": "a plate of food with a spoon and a bowl of noodles",
+  "COCO_val2014_000000008483": "a man and a woman standing in front of a microphone's behind a painting",
+  "COCO_val2014_000000008493": "a man riding a wave on top of a surfboard",
+  "COCO_val2014_000000008612": "two animals are standing in a field next to a tree",
+  "COCO_val2014_000000008775": "a bedroom with a bed poster on the wall and a pictures on the wall",
+  "COCO_val2014_000000008803": "a man talking on a cell phone wall wearing a helmet",
+  "COCO_val2014_000000008888": "an airplane sitting on the runway at an airport",
+  "COCO_val2014_000000009002": "a pizza is in the middle of a tray on a table",
+  "COCO_val2014_000000009041": "a cat standing on a sidewalk with pigeons in the background",
+  "COCO_val2014_000000009156": "a sandwich and a cup of coffee on a table",
+  "COCO_val2014_000000009170": "a cat sitting on the edge of a toilet",
+  "COCO_val2014_000000009217": "a clock tower is in the middle of a building",
+  "COCO_val2014_000000009236": "a kitchen with a stove and a dishwasher in it",
+  "COCO_val2014_000000009381": "a display case of a line of pizzas on a display",
+  "COCO_val2014_000000009548": "two zebras and a field with a baby zebra in the background",
+  "COCO_val2014_000000009647": "a man in suits and ty standing in front of a tent",
+  "COCO_val2014_000000009699": "a group of large planes sitting on top of an airport runway",
+  "COCO_val2014_000000009727": "a snowboarder sitting in the snow with a snowboard in the back row",
+  "COCO_val2014_000000009791": "an ornate fashion clock is on display in an ornate fireplace",
+  "COCO_val2014_000000009801": "a woman riding a motorcycle with a cat on the back of it",
+  "COCO_val2014_000000009807": "a cat looks at a laptop computer",
+  "COCO_val2014_000000009914": "a plate with a sandwich and fries on it",
+  "COCO_val2014_000000010014": "a man in a blue suit standing next to a bus at a bus stop",
+  "COCO_val2014_000000010104": "two men are riding on the back of a motorcycle",
+  "COCO_val2014_000000010115": "a small bathroom with a toilet and a sink in it",
+  "COCO_val2014_000000010290": "a bathroom with a toilet sink and bathtub",
+  "COCO_val2014_000000010400": "a stone building with a clock on the top of it",
+  "COCO_val2014_000000010428": "a sink in a room with pictures on the walls",
+  "COCO_val2014_000000010526": "a statue of a skateboarder in front of a building",
+  "COCO_val2014_000000010684": "a surfer riding a wave in the ocean",
+  "COCO_val2014_000000010707": "two young men sitting on a couch playing weak",
+  "COCO_val2014_000000010764": "a baseball player is getting ready to catch a ball",
+  "COCO_val2014_000000010825": "a person sitting in a car using a cell phone in the passenger seat",
+  "COCO_val2014_000000010837": "two soccer players are playing soccer in a field",
+  "COCO_val2014_000000010935": "horses in a field with a bunch of elephants grazing in the background",
+  "COCO_val2014_000000011081": "an airplane is flying high in the sky",
+  "COCO_val2014_000000011099": "a series of photos of people with laptops",
+  "COCO_val2014_000000011115": "an older couple holding a white cat in a room",
+  "COCO_val2014_000000011156": "the contents of a bed is laying on a table with a purse",
+  "COCO_val2014_000000011181": "a woman walking in the rain with a purple umbrella",
+  "COCO_val2014_000000011184": "a computer keyboard and mouse on a desk",
+  "COCO_val2014_000000011198": "a wooden table topped with plates of food and drinks",
+  "COCO_val2014_000000011209": "a man and a woman sitting on a couch playing video games",
+  "COCO_val2014_000000011276": "a person standing next to a tray of food on a kitchen counter",
+  "COCO_val2014_000000011625": "a man and a woman standing on a beach playing frisbee",
+  "COCO_val2014_000000012085": "a man laying in a bed next to a cat",
+  "COCO_val2014_000000012115": "a man standing in front of a laptop computer",
+  "COCO_val2014_000000012204": "two giraffes are walking in a fenced-in area",
+  "COCO_val2014_000000012471": "a small airplane sitting on top of an airport runway",
+  "COCO_val2014_000000012744": "three motorcycles parked on the side of a road near mountains",
+  "COCO_val2014_000000012817": "a man flying to the air wall riding a skateboard",
+  "COCO_val2014_000000012896": "a man riding a bicycle down a sidewalk next to a building",
+  "COCO_val2014_000000012927": "a man riding a wave on top of a surfboard",
+  "COCO_val2014_000000013220": "three women sitting at a table eating food",
+  "COCO_val2014_000000013466": "a street sign on a building next to a statue of a building",
+  "COCO_val2014_000000013490": "a cutting board topped with a sandwich and a cutting board",
+  "COCO_val2014_000000013525": "a shirtless man laying on a bed with white sheets",
+  "COCO_val2014_000000013882": "a black and white cat laying on a tiled floor",
+  "COCO_val2014_000000013985": "a man sitting in front of a laptop computer",
+  "COCO_val2014_000000014056": "a group of people riding surfboards in the ocean",
+  "COCO_val2014_000000014175": "a woman walking down the street next to a blackbird",
+  "COCO_val2014_000000014257": "a man walking down a street next to a wall",
+  "COCO_val2014_000000014338": "a boat is in the water near the shore",
+  "COCO_val2014_000000014392": "a woman holding a baseball bat next to a street sign",
+  "COCO_val2014_000000014450": "a truck on a hillside with a couple of people",
+  "COCO_val2014_000000014473": "a red and yellow train traveling through a field",
+  "COCO_val2014_000000014713": "a living room with a couch a table and a television",
+  "COCO_val2014_000000014723": "a snowboarder in an orange jacket is going down a snowy mountain",
+  "COCO_val2014_000000014781": "a bathroom with a toilet and a paper tile floor",
+  "COCO_val2014_000000015017": "a man standing on a tennis court holding a racket",
+  "COCO_val2014_000000015050": "a person riding skis down a snow-covered slope",
+  "COCO_val2014_000000015254": "a tray with a bunch of food inside of it",
+  "COCO_val2014_000000015260": "a small black inside of a cage with a bird in it",
+  "COCO_val2014_000000015345": "a family sitting at a table eating food",
+  "COCO_val2014_000000015667": "a yellow fire hydrant sitting on the side of a road",
+  "COCO_val2014_000000016005": "a woman holds a child and a cow standing next to a fence",
+  "COCO_val2014_000000016241": "an airplane is flying over city skyscrapers",
+  "COCO_val2014_000000016249": "two older men sitting on a bench on a sidewalk",
+  "COCO_val2014_000000016491": "two baseball players are standing on a baseball field",
+  "COCO_val2014_000000016521": "a woman in a purple dress standing next to a bottle of stairs",
+  "COCO_val2014_000000016599": "a clock tower in the middle of a city",
+  "COCO_val2014_000000016631": "a sign on a street next to a tall building",
+  "COCO_val2014_000000016848": "a white plate topped with broccoli and mushrooms",
+  "COCO_val2014_000000016928": "a rusted fire hydrant sitting in the middle of a garden",
+  "COCO_val2014_000000016931": "a red stop sign sitting on the side of a rote",
+  "COCO_val2014_000000017115": "two zebras standing next to each other next to a fence",
+  "COCO_val2014_000000017178": "orses walking down a street next to a fence",
+  "COCO_val2014_000000017313": "a man and a woman standing in front of a table with a cate",
+  "COCO_val2014_000000017756": "a boat with the colorful flags on it in a river",
+  "COCO_val2014_000000017769": "a dog sitting on a wooden stand next to a mirror",
+  "COCO_val2014_000000017905": "a man standing next to a traffic light",
+  "COCO_val2014_000000017927": "a group of young men standing next to each other on a beach",
+  "COCO_val2014_000000017953": "a bunch of vegetables on a counter in a kitchen",
+  "COCO_val2014_000000018014": "a pizza is in a box on a table",
+  "COCO_val2014_000000018412": "a little girl brushing her hair with a brush in her hand",
+  "COCO_val2014_000000018480": "a group of people posing for a picture with a frisbee in a field",
+  "COCO_val2014_000000018519": "a man riding his skateboard up the side of a rat",
+  "COCO_val2014_000000018687": "people sitting on a bench underneath umbrellas",
+  "COCO_val2014_000000018770": "a man wearing a suit and tie looking at the camera",
+  "COCO_val2014_000000018771": "a train traveling over a bridge over a body of water",
+  "COCO_val2014_000000018975": "an airplane on the water with buses and buses",
+  "COCO_val2014_000000019158": "a city bus parked on the side of the rote",
+  "COCO_val2014_000000019167": "a small round bowl filled with lots of oranges",
+  "COCO_val2014_000000019308": "a cat laying on its back holding a pair of scissors",
+  "COCO_val2014_000000019443": "an elephant standing next to a wooden fence in the water",
+  "COCO_val2014_000000019455": "a room with a television inside of it",
+  "COCO_val2014_000000019888": "a bedroom with a bed and a bedroom next to a window",
+  "COCO_val2014_000000019904": "two police officers on motorcycles on a city street",
+  "COCO_val2014_000000020111": "a man riding a wave on top of a surfboard",
+  "COCO_val2014_000000020179": "a man walking on the beach carrying a surfboard",
+  "COCO_val2014_000000020254": "a man holding an umbrella in the rain",
+  "COCO_val2014_000000020268": "a microwave oven with a toaster oven sitting on a table",
+  "COCO_val2014_000000020276": "a man riding a wave on top of a surfboard",
+  "COCO_val2014_000000020305": "a man sitting in a chair wall holding a wee remote",
+  "COCO_val2014_000000020381": "a train on a train track next to a train station",
+  "COCO_val2014_000000020470": "two giraffes are standing in a fenced area",
+  "COCO_val2014_000000020598": "a group of young children sitting at a table eating pizza",
+  "COCO_val2014_000000020913": "to hot dogs with ketchup and mustard on a plate",
+  "COCO_val2014_000000020992": "a woman is eating a banana in a restaurant",
+  "COCO_val2014_000000021198": "a woman sitting at a table in a kitchen",
+  "COCO_val2014_000000021202": "a traffic light on a city street next to buildings",
+  "COCO_val2014_000000021284": "a man riding a wave on top of a surfboard",
+  "COCO_val2014_000000021310": "three young girls posing for a picture with a tennis racket",
+  "COCO_val2014_000000021327": "a beer sitting on a table next to a glass with a tv",
+  "COCO_val2014_000000021498": "a little girl standing on top of a refrigerator",
+  "COCO_val2014_000000021864": "a body of water with the beach covered in surfboard",
+  "COCO_val2014_000000021900": "a woman riding on the back of a white horse",
+  "COCO_val2014_000000021979": "two men standing on skis in the snow",
+  "COCO_val2014_000000022118": "people sitting on the beach watching umbrellas and chairs",
+  "COCO_val2014_000000022158": "a kitchen with a stove and microwave in a kitchen"
+},
+    ja: {
+  "COCO_val2014_000000419344": "象が3頭並んで歩いている。",
+  "COCO_val2014_000000177838": "パソコンの横に食べかけのソーセージが入っている。",
+  "COCO_val2014_000000567863": "大きなキリンと小さなキリンが3頭歩いている。",
+  "COCO_val2014_000000048129": "眼鏡をかけた男性がケーキを食べている。",
+  "COCO_val2014_000000011156": "ベッドの上にバッグの中身が載っている。",
+  "COCO_val2014_000000157019": "雨の中を傘をさした女性が歩いている。",
+  "COCO_val2014_000000022176": "白い車の前に男性がいる。",
+  "COCO_val2014_000000333746": "黄色と赤のラインが入った電車が踏切を走っている。",
+  "COCO_val2014_000000307292": "スーツ姿の男性が笑っている。",
+  "COCO_val2014_000000137221": "野球の試合でバッターがバットを振っている。",
+  "COCO_val2014_000000268322": "恋愛付きのベッドの周りに白いカーテンがある。",
+  "COCO_val2014_000000002225": "女の子が美味しそうにドーナツをつかんでいる。",
+  "COCO_val2014_000000384822": "皿の上にピザが1枚乗っている。",
+  "COCO_val2014_000000008612": "毛の長い茶色の牛が2頭こちらを見ている。",
+  "COCO_val2014_000000516786": "鏡に映った自分の姿を鏡に映っている。",
+  "COCO_val2014_000000299023": "ヒゲを生やした男性がミキサを使って料理をしている。",
+  "COCO_val2014_000000358301": "駅のホームに電車が停車している。",
+  "COCO_val2014_000000163348": "机の上にパソコンと電話が置いてある",
+  "COCO_val2014_000000168093": "サーフィンをしている人が波に乗っている。",
+  "COCO_val2014_000000240637": "ベッドの上で猫が丸まって寝ている。",
+  "COCO_val2014_000000406744": "鳥が3匹草原に立っている。",
+  "COCO_val2014_000000432234": "クマのぬいぐるみが椅子に座っている。",
+  "COCO_val2014_000000356500": "雪の上にスキー板を立てかけてある。",
+  "COCO_val2014_000000070280": "鳥が砂浜を歩いているところに鳥がいる。",
+  "COCO_val2014_000000257992": "野球の試合でピッチャーがボールを投げている。",
+  "COCO_val2014_000000262440": "白いバスタブのそばに白い便器がある。",
+  "COCO_val2014_000000202040": "赤いバイクが道路に止まっている。",
+  "COCO_val2014_000000503311": "波打ち際でサーフボードを持って歩いている人がいる。",
+  "COCO_val2014_000000188173": "キリンがいる草原にシマウマの親子がいる。",
+  "COCO_val2014_000000094055": "緑の服を着た男性が馬に乗っている。",
+  "COCO_val2014_000000077689": "車のサイドミラーに犬が映っている。",
+  "COCO_val2014_000000045108": "白いシーツの上に猫が横たわっている。",
+  "COCO_val2014_000000136680": "赤いスニーカーを履いている人の足元に赤い靴を履いている人の足元に赤いスナーなーアイデーガーガーガーガー",
+  "COCO_val2014_000000115118": "パラフルな貨物列車が線路を走っている。",
+  "COCO_val2014_000000434915": "部屋の中にトランクが置かれている。",
+  "COCO_val2014_000000550422": "サムラの中で羊が草を食べている。",
+  "COCO_val2014_000000226498": "芝生の上でサッカーをしている人たちがいる。",
+  "COCO_val2014_000000357542": "雪のうち3匹の犬が座っている。",
+  "COCO_val2014_000000388487": "朝村の中にたくさんの人が立っている。",
+  "COCO_val2014_000000333286": "緑色のシャツを着た男性が羊の毛を刈っている。",
+  "COCO_val2014_000000391006": "工場に飛行機が止まっている。",
+  "COCO_val2014_000000167510": "赤色のストップと書かれた看板が立っている。",
+  "COCO_val2014_000000148568": "キリンが二頭とこの子の顔を眺めている。",
+  "COCO_val2014_000000429593": "部屋の中にソファーやテーブルが置かれている。",
+  "COCO_val2014_000000020598": "子供たちがピザを食べている。",
+  "COCO_val2014_000000425620": "二段ベッドの上に子供が座っている。",
+  "COCO_val2014_000000290839": "青いボートの後ろに男性と犬が乗っている。",
+  "COCO_val2014_000000399991": "野球選手がボールを投げようとしている。",
+  "COCO_val2014_000000170211": "男性と女性がリモコンを持ってゲームをしている。",
+  "COCO_val2014_000000161185": "駅のホームに電車が止まっている。",
+  "COCO_val2014_000000229267": "パラソルの下にテーブルと椅子が置いてある。",
+  "COCO_val2014_000000471642": "演者の中で男性が数人立っている",
+  "COCO_val2014_000000577160": "白い皿の上に料理が盛り付けられている。",
+  "COCO_val2014_000000393004": "白い服を着た女性がテニスをしている。",
+  "COCO_val2014_000000324189": "朝村の中に鳥が止まっている。",
+  "COCO_val2014_000000152525": "青信号の向こうにたくさんの車が止まっている。",
+  "COCO_val2014_000000571876": "たくさんの飲み物と飲み物が置いてある。",
+  "COCO_val2014_000000077360": "ピンク色の建物の前を牛が歩いている。",
+  "COCO_val2014_000000289630": "電車の壁に落書きがされている。",
+  "COCO_val2014_000000396691": "2人の女性がキッチンで料理をしている。",
+  "COCO_val2014_000000014723": "雪山でスノーボードをしている男性がいる。",
+  "COCO_val2014_000000124930": "クルーサイドにたくさんの人たちが立っている。",
+  "COCO_val2014_000000129852": "クリースビーを投げている人である。",
+  "COCO_val2014_000000131497": "オオシをかぶった犬が横になっている。",
+  "COCO_val2014_000000410979": "様々な種類のドーナツが並んでいる。",
+  "COCO_val2014_000000039606": "ケートボードに乗った人である。",
+  "COCO_val2014_000000369373": "2人の男性がテレビゲームをしている",
+  "COCO_val2014_000000366830": "瓶の中に茶色い牛が立っている。",
+  "COCO_val2014_000000412184": "工場に飛行機が止まっている。",
+  "COCO_val2014_000000426878": "ケートボードに乗った人である。",
+  "COCO_val2014_000000442463": "ケートボードに乗った人である。",
+  "COCO_val2014_000000322175": "木の板の上に果物が載っている。",
+  "COCO_val2014_000000058425": "赤い服を着た女性が食事をしている。",
+  "COCO_val2014_000000452784": "オレンジ色の皿の上に緑色の野菜が乗っている。",
+  "COCO_val2014_000000556608": "チョコレートケーキの上にチョコレートが乗っている。",
+  "COCO_val2014_000000115241": "木の板の上にピザが乗っている。",
+  "COCO_val2014_000000452084": "黒い皿の上に食材が載っている。",
+  "COCO_val2014_000000360818": "子供が椅子に座ってこちらを見ている。",
+  "COCO_val2014_000000438850": "白い扉の上に時計がかけられている。",
+  "COCO_val2014_000000376677": "トラックの後ろにゴミ収集車が止まっている。",
+  "COCO_val2014_000000359465": "サーフィンをしている人が波に乗っている。",
+  "COCO_val2014_000000437126": "プレイの猫がこちらを向いている。",
+  "COCO_val2014_000000474934": "3人の男性が砂浜を散歩している。",
+  "COCO_val2014_000000352901": "畑になっている緑の野菜がたくさんついている。",
+  "COCO_val2014_000000147725": "白いトラックが車道を走っている。",
+  "COCO_val2014_000000258883": "バベキューグリールで調理されたソーセージを作っている。",
+  "COCO_val2014_000000125472": "ケートボードに乗った人である。",
+  "COCO_val2014_000000555337": "牧草地に茶色い牛が2頭いる",
+  "COCO_val2014_000000023802": "後期の前に男性が立っている。",
+  "COCO_val2014_000000046761": "草原に白い鳥が草むらの中を歩いている。",
+  "COCO_val2014_000000016241": "高層ビルが立つ並ぶ街のジョックを飛行機が飛んでいる。",
+  "COCO_val2014_000000443299": "園地に座った男女が携帯電話を見ている。",
+  "COCO_val2014_000000467540": "白いシャツを着た男性が船に乗っている。",
+  "COCO_val2014_000000439781": "柵の中に象が4頭歩いている。",
+  "COCO_val2014_000000469803": "赤と白の消火栓が路上にある。",
+  "COCO_val2014_000000117432": "馬に乗った人が水辺に立っている。",
+  "COCO_val2014_000000178796": "柵の中でキリンが餌を食べている。",
+  "COCO_val2014_000000381032": "女性のテニスプレーヤーがボールを打ち返そうとしている。",
+  "COCO_val2014_000000529668": "黒い服を着た女性がカバンを持っている。",
+  "COCO_val2014_000000083059": "赤いソファのある部屋に椅子がいくつか置いてある。",
+  "COCO_val2014_000000379108": "白髪の男性が水の上に立っている。",
+  "COCO_val2014_000000436348": "青い服を着た男性が白いパラサルを立てている。",
+  "COCO_val2014_000000489611": "男の子がゲームをしている。",
+  "COCO_val2014_000000281008": "黒いベッドスーツを着た男性がサーフィンをしている。",
+  "COCO_val2014_000000035195": "砂浜に白いカモメが飛び立とうとしている。",
+  "COCO_val2014_000000261471": "広い道路をたくさんのバイクが走っている。",
+  "COCO_val2014_000000187001": "キッチンで男性が椅子に座っている。",
+  "COCO_val2014_000000496213": "スーツ姿の男性が肖像でこちらを見ている。",
+  "COCO_val2014_000000294134": "白いトラックが道路を走っている。",
+  "COCO_val2014_000000417164": "雪の積もったコインパーキングの前に立っている。",
+  "COCO_val2014_000000419723": "サラダとサンドイッチが皿に盛られている。",
+  "COCO_val2014_000000085329": "髪の長い女性がネクタイをしている。",
+  "COCO_val2014_000000438221": "水の中に黒い鳥が2羽止まっている。",
+  "COCO_val2014_000000200717": "プリスビーを投げようとしている男性がいる。",
+  "COCO_val2014_000000448278": "水辺にたくさんのカモが立っている。",
+  "COCO_val2014_000000344930": "オーロワキの芝生に立つ赤い消火栓が立っている。",
+  "COCO_val2014_000000222370": "広い建物の前にバイクが数台止まっている。",
+  "COCO_val2014_000000388658": "ウィドをつけた犬が猫のそばに座っている。",
+  "COCO_val2014_000000208623": "男性と女性がノートパソコンを操作している。",
+  "COCO_val2014_000000503826": "机の上にパソコンとマウスが置いてある",
+  "COCO_val2014_000000089500": "山の中の道を走っている。白い電車が走っている。",
+  "COCO_val2014_000000465069": "白い冷蔵庫の上にシールが貼ってある。",
+  "COCO_val2014_000000494404": "信号機の向こう側に水の中に入っている。",
+  "COCO_val2014_000000205577": "冷蔵庫にたくさんのマグネットが貼られている",
+  "COCO_val2014_000000050230": "ケーキの上に飾られている人参と白のデコレーションしてある。",
+  "COCO_val2014_000000388643": "飛行機の窓から飛行機が飛んでいる。",
+  "COCO_val2014_000000244240": "洋式トイレの便座が開いている。",
+  "COCO_val2014_000000251857": "ゲートボードに乗った人である。",
+  "COCO_val2014_000000034180": "バナナの帽子をかぶった男性が笑っている。",
+  "COCO_val2014_000000153782": "広い建物の前に街灯が立っている。",
+  "COCO_val2014_000000256003": "おもちゃの電車が線路の上を走っている。",
+  "COCO_val2014_000000311922": "サングラスをかけた女性がネクタイをしている。",
+  "COCO_val2014_000000567329": "養鶏をした男性がベッドの上に立っている。",
+  "COCO_val2014_000000569969": "ケートボードに乗った人である。",
+  "COCO_val2014_000000449872": "駐車場に車がたくさん止まっている。",
+  "COCO_val2014_000000163684": "雪の積もったこの枝をくわえている犬がいる。",
+  "COCO_val2014_000000250311": "キッチンのコンロにはフライパンが吊るされている。",
+  "COCO_val2014_000000120977": "街の見える街の向こうに時計台が立っている。",
+  "COCO_val2014_000000311394": "赤ちゃんが歯ブラシを持っている。",
+  "COCO_val2014_000000160195": "ゲートボードに乗った人である。",
+  "COCO_val2014_000000542077": "パセラに信号機が4台並んでいる。",
+  "COCO_val2014_000000525376": "車のトランクにリュックサックが積まれている。",
+  "COCO_val2014_000000176863": "2頭のシマウマが草を食べている。",
+  "COCO_val2014_000000512576": "キッチンの真ん中にグラスが置いてある。",
+  "COCO_val2014_000000069757": "女性たちがケーキを切り分けている。",
+  "COCO_val2014_000000267408": "男性と女性がテレビを見ている",
+  "COCO_val2014_000000487450": "黒いバイクに二人乗りをしている人がいる。",
+  "COCO_val2014_000000191240": "花瓶に黄色い花がいけられている。",
+  "COCO_val2014_000000309120": "緑色のユニフォームを着た男性がサッカーボールを蹴っている。",
+  "COCO_val2014_000000023320": "白い皿の上にチョコレートケーキがある。",
+  "COCO_val2014_000000303893": "2人の子供がドーナツを食べている。",
+  "COCO_val2014_000000193015": "キッチンの真ん中にバナナが置いてある。",
+  "COCO_val2014_000000410885": "波打ち際にたくさんの人が集まっている。",
+  "COCO_val2014_000000201916": "羊が岩の間に立っている様相黒い羊がいる",
+  "COCO_val2014_000000492552": "スーツ姿の男性が壁の前に立っている。",
+  "COCO_val2014_000000167544": "青と白の飛行機が空を飛んでいる。",
+  "COCO_val2014_000000084889": "たくさんの果物が売られている。",
+  "COCO_val2014_000000200401": "自転車に乗った男性が自転車に乗っている。",
+  "COCO_val2014_000000179285": "テニスラケットの上にボールが乗っている。",
+  "COCO_val2014_000000319024": "映像庫の中に女の子が入っている",
+  "COCO_val2014_000000069138": "赤信号の信号が赤になっている。",
+  "COCO_val2014_000000051250": "木の近くに茶色い馬が立っている。",
+  "COCO_val2014_000000189566": "テレビの画面に女性と男性が写っている。",
+  "COCO_val2014_000000484681": "赤い服を着た子供がカバンを持っている。",
+  "COCO_val2014_000000334371": "2階建てのバスが道路を走っている。",
+  "COCO_val2014_000000279524": "白い壁の部屋にテレビとソファーがある。",
+  "COCO_val2014_000000318080": "2頭のクマが水の中に入っている。",
+  "COCO_val2014_000000534605": "黒い服を着た男性がバイクの前に立っている。",
+  "COCO_val2014_000000421195": "広い草原の中に羊が数頭こちらを見ている。",
+  "COCO_val2014_000000162398": "貨幣のネクタイを飾られている男性がいる。",
+  "COCO_val2014_000000010707": "2人の男性がテレビゲームをしている。",
+  "COCO_val2014_000000324250": "クマのぬいぐるみがカップの中に置かれている。",
+  "COCO_val2014_000000024805": "パンダが雪が積もっている窓の外に雪が積もっている。",
+  "COCO_val2014_000000460379": "キリンが酸と草を食べている。",
+  "COCO_val2014_000000322369": "テーブルの上に食べかけのハンバーガーと飲み物が置いてある。",
+  "COCO_val2014_000000007556": "海の上にたくさんのカイトが飛んでいる。",
+  "COCO_val2014_000000566717": "白いバスタブの中に猫が入っている。",
+  "COCO_val2014_000000152388": "鳥が3匹、たくさんの鳥の後ろに止まっている。",
+  "COCO_val2014_000000535306": "ケートボードに乗った人である。",
+  "COCO_val2014_000000560623": "窓の外にたくさんの飛行機が止まっている。",
+  "COCO_val2014_000000125815": "駅のホームに電車が止まっている。",
+  "COCO_val2014_000000094157": "時計台の時計は1時18分を指している。",
+  "COCO_val2014_000000453903": "空港の荷物受取所に人が立っている。",
+  "COCO_val2014_000000497094": "黒いクザクが青いクザクが寄り添っている。",
+  "COCO_val2014_000000545867": "牧場でたくさんの馬が草を食べている。",
+  "COCO_val2014_000000010526": "ケートボードに乗った人である。",
+  "COCO_val2014_000000288799": "赤い列車が線路を走っている。",
+  "COCO_val2014_000000299448": "駅のホームに電車が止まっている。",
+  "COCO_val2014_000000200250": "トラックの後ろにたくさんの人が立っている。",
+  "COCO_val2014_000000325211": "ノートパソコンの横に本と水色の机の上に本が置かれている。",
+  "COCO_val2014_000000242423": "人参の野菜が陳列されている。",
+  "COCO_val2014_000000282098": "街角に座っている人の後ろに看板がある。",
+  "COCO_val2014_000000174672": "キッチンのコンロ台の上に置かれている。",
+  "COCO_val2014_000000232348": "キッチンのコンロにはミキサーが置かれている。",
+  "COCO_val2014_000000421564": "赤ちゃんがケーキをバースでケーキを頬張っている。",
+  "COCO_val2014_000000245067": "サーフィンをしている男性がいる。",
+  "COCO_val2014_000000502766": "羊を走っている男性が犬に引き連れている。",
+  "COCO_val2014_000000224377": "青いユニフォームを着た女性がソフトボールを持っている。",
+  "COCO_val2014_000000556341": "シマウマの前に立っている男性がいる。",
+  "COCO_val2014_000000128812": "キッチンのコンロには夜間が置かれている。",
+  "COCO_val2014_000000224742": "洗面台の横に段ボールが置かれている。"
+},
+    vi: {
+  "470373679_98dceb19e7": "một nhóm người đứng trước một tòa nhà trong khi mặc núi",
+  "2689001252_e0016c89f0": "hai cô gái trong bộ đồ bơi màu xanh và trắng chơi bên ngoài",
+  "3214573346_d3a57f0328": "một con chó nhỏ màu nâu và trắng chơi với một con chó đen và nâu chơi trong không khí",
+  "3106026005_473a7b1c8c": "một người đàn ông mặc áo khoác màu xanh và đội mũ bảo hiểm màu đen với một chiếc áo khoác một bờm",
+  "326456451_effadbbe49": "một con chó đen vài trắng chạy dọc theo một con đường đỏ",
+  "3217620013_8b17873273": "một cầu thủ bóng rồi trong màu cam trang phục màu cam trắng chạy bóng trong một trận bó",
+  "3642220260_3aa8a52670": "một con chó đen đi bộ trên bãi biển cạnh một bãi biển",
+  "561940436_64d6fc125d": "hai người phụ nữ trong trang phục màu đen và đội mũ bảo hiểm",
+  "533483374_86c5d4c13e": "một con chó nâu và trắng đang chơi trên bãi biển cạnh một quả bóng trong biển",
+  "2844641033_dab3715a99": "một cậu bé mặc áo sơ mi sọc đán trên bãi biển cạnh một bãi biển",
+  "1561658940_a947f2446a": "một cô gái trong một chiếc áo sơ mi màu đen và trắng một chiếc áo sơ mi màu đỏ trong",
+  "3062173277_bfb5ef4c45": "một nhóm người đi xe máy trèo trên mặt nước",
+  "444481722_690d0cadcf": "hai phụ nữ trong chàng trai đang đi bộ xung quanh bên cạnh một tòa nhà",
+  "3125309108_1011486589": "một nhóm các cầu thủ bóng bầu dục trong khi một người đàn ông trong một trận bóng bầu dục",
+  "3518126579_e70e0cbb2b": "một cậu bé đang trượt xuống một làn can cầu thang",
+  "359837950_9e22ffe6c2": "một con chó đen đi bộ trên một ngọn đồi cỏ với một ngọn núi phía sau họ",
+  "2893374123_087f98d58a": "một người đàn ông trên một chiếc xe máy màu xanh lá cây trên một chiếc xe máy",
+  "3472364264_dbde5a8d0a": "một con chó nâu đi bộ trên bãi biển",
+  "3549583146_3e8bb2f7e9": "một cậu bé đội mũ bảo hiểm đi xe đạp của mình trên một con đường phố",
+  "2183227136_8bb657846b": "một con chó đang đi bộ trên bãi biển với hai con chó của mình trên bãi biển",
+  "241347760_d44c8d3a01": "một cầu thủ bóng đá mặc đồng phục màu đỏ và trắng đang chạy trên sân",
+  "1467533293_a2656cc000": "hai đứa trẻ đang chơi trên cỏ",
+  "1917265421_aeccf1ca38": "một nhóm người đứng trên bãi cỏ",
+  "2248487950_c62d0c81a9": "hai người đang đi bộ trên một chiếc xe tải màu đỏ",
+  "512101751_05a6d93e19": "một con chó trắng đang chạy qua một lĩnh vực",
+  "2396691909_6b8c2f7c44": "một cô gái mặc áo sơ mi trắng và đội mũ bảo hiểm đi bộ trong khi một người phụ nữ trượt trời trời gỗm",
+  "2894217628_f1a4153dca": "hai cầu thủ bóng đá trong một trạng bóng đá",
+  "2854207034_1f00555703": "một cậu bé đội mũ bảo hiểm đi xe đạp của mình trên cỏ",
+  "3042380610_c5ea61eef8": "một nhóm trẻ em trong khi một máy quay trong khi một người đàn ông chơi bên ngoài trời",
+  "2196107384_361d73a170": "người đàn ông trong bộ đồ đi bộ trên một tòa nhà màu trắng",
+  "3245460937_2710a82709": "một cậu bé mặc áo sơ mi màu xanh đang chơi quần vợ tennis bóng",
+  "1584315962_5b0b45d02d": "hai người đang chơi trên mặt tuyết phù trong tuyết",
+  "2498897831_0bbb5d5b51": "5 đứa trẻ đang trượt một chiếc áo sơ mi màu đen trong một chiếc áo sơ mi màu đen",
+  "3157847991_463e006a28": "hai người đàn ông mặc quần short màu xanh đang đứng trước một tòa nhà màu đen",
+  "1432179046_8e3d75cf81": "một người đàn ông mặc quần jean vài trắng đang đi bộ quay một con phố đầy màu xanh lá kế",
+  "3334537556_a2cf4e9b9a": "3 người trong tuyết",
+  "2533424347_cf2f84872b": "một chiếc xe đua màu đen và đội mũ bảo hiểm đua trong một chiếc xe đua màu đen",
+  "3085667865_fa001816be": "một người trượt tuyết màu đen và nâu của mình trong không khí",
+  "2991994607_06f24ec7a6": "hai phụ nữ mặc đồng phục màu đen và đội mũ bảo hiểm màu đen",
+  "3225310099_d8e419ba56": "một chiếc kiện máy bay qua một chiếc xe màu đỏ",
+  "3255482333_5bcee79f7e": "một người trượt tuyết xuống một ngọn núi tuyết",
+  "3567061016_62768dcce1": "một con chim trên bãi chân sáo",
+  "2308271254_27fb466eb4": "hai con chó chạy qua một rào",
+  "1764955991_5e53a28c87": "một con chó dám nắng chạy dọc theo một con đường đứng mòn",
+  "2922973230_5a769ef92a": "một người phụ nữ và một con chó trắng chạy trên một con đường cỏ",
+  "106490881_5a2dd9b7bd": "một cậu bé mặc áo sơ mi màu xanh và quần short màu xanh đang đứng trên bãi biển",
+  "524105255_b346f288be": "một người phụ nữ và một người phụ nữ đeo kính dâm và một chiếc áo sơ mi màu đen đi bộ",
+  "3347798761_5c5260b000": "một người trên một chiếc xe máy màu xanh lá cây trên một chiếc xe trước xe đạp của mình",
+  "1332722096_1e3de8ae70": "hai phụ nữ trẻ mặc áo khoác màu xanh đang đứng trước một tòa nhà màu xanh lá cây trên vệ",
+  "3630332976_fdba22c50b": "một cậu bé mặc áo sơ mi đỏ và trắng trắng vào một cậu bé trong một chiếc áo sơm",
+  "3222055946_45f7293bb2": "một cầu thủ bóng dồ trong một trại bóng dồ",
+  "2518508760_68d8df7365": "một con chó đua trên đường đua",
+  "3565598162_56044bc2f7": "một nhóm người phụ nữ trong một chiếc áo sơ mi màu đen và trắng trong một bức tường với mũ",
+  "3502993968_4ee36afb0e": "một người đàn ông mặc áo sơ mi xanh đang đi xe đạp của mình trong khi một con phổ",
+  "2544182005_3aa1332bf9": "một cậu bé đội mũ bảo hiểm đi xe đạp của mình trên một con đường đu",
+  "3262075846_5695021d84": "cầu thủ bóng bầu dục cầu thủ bóng đá trong một trận bóng đá",
+  "2502905671_c6039804ab": "một người đàn ông chơi với một con chó của mình trên bãi biển",
+  "3459156091_c1879ebe28": "một cậu bé mặc áo sơ mi xanh và đội mũ bảo hiểm đi xe màu đen trên một con phố",
+  "2706766641_a9df81969d": "một cậu bé mặc áo sơ mi màu xanh đang đứng trước một tòa nhà trong một bộ trang phục",
+  "2608289957_044849f73e": "một cậu bé mặc áo sơ mi xanh và đội mũ bảo hiểm trên một chiếc xe tải màu đỏ",
+  "2295750198_6d152d7ceb": "một cô gái chạy trong một chiếc áo sơ mi màu đỏ và trắng chạy trên cỏ",
+  "3364861247_d590fa170d": "một nhóm châu á phụ nữ trẻ mặc áo sơ mi xanh đang đi bộ qua cầu",
+  "3716244806_97d5a1fb61": "ba chàng trai trẻ đang trước một tảng đá bên ngoài một cái gì đó",
+  "1659358141_0433c9bf99": "một con chó nâu đang chạy qua một món đồ chơi màu xanh lá cây trên cỏ",
+  "2435685480_a79d42e564": "một người đàn ông mặc áo sơ mi đang đang ngồi trên một tảng đá trong một chiếc áo sơ mường",
+  "2682382530_f9f8fd1e89": "một cậu bé đang chơi trên một con phố",
+  "3080056515_3013830309": "một cậu bé đội mũ bảo hiểm màu đen và đội mũ cậu bé trong một chiếc áo sơ mi màu đỏ",
+  "3568197730_a071d7595b": "một người đàn ông mặc quần jean màu xanh và trắng trèo lên không chung chung trên một vượt",
+  "400851260_5911898657": "một người đàn ông mặc áo khoác màu đỏ đang đi bộ qua quần xanh đang đi bộ qua cầu trờ trợ cờ đùm vỡ",
+  "3503623999_bbd5dcfb18": "một người phụ nữ đội mũ bảo hiểm màu đen và đội mũ bảo hiểm màu đen",
+  "2861932486_52befd8592": "một người đàn ông mặc áo sơ mi màu xanh và đội mũ cây",
+  "2225231022_1632d0a5aa": "ba người đàn ông châu á phí trước của một con phố thành phố",
+  "3640422448_a0f42e4559": "một cậu bé đội mũ bảo hiểm đi xe đạp của mình trên một con đường với một con rộ",
+  "2762301555_48a0d0aa24": "một cô gái trong một chiếc áo khoác màu đỏ trên bãi biển cạnh một bãi biển",
+  "2450299735_62c095f40e": "một cô gái trẻ chơi trong một hồ bơi màu xanh lá cây",
+  "3259002340_707ce96858": "một con chó đen đang chạy trên cỏ",
+  "2944362789_aebbc22db4": "một cậu bé đang thực hiện một chiếc xe máy màu đen trượt ván trên một công viên trượt bằng",
+  "2764178773_d63b502812": "một người đàn ông thực hiện một chiếc xe đạp của mình trên một chiếc xe đạp của mình",
+  "3301811927_a2797339e5": "hai cầu thủ khúc con cầu trên băng",
+  "2239938351_43c73c887c": "hai con chó nhỏ màu nâu và trắng đang chơi với một quả bóng màu xanh và một con chó nâu tròn tròn cợn",
+  "2646116932_232573f030": "một cậu bé mặc áo sơ mi xanh đi bộ trên cò xanh",
+  "3350786891_6d39b234e9": "một nhóm trẻ em trong trang phục màu xanh lá cây đang ngồi trên mặt nước phụ",
+  "229862312_1a0ba19dab": "một con chó nâu nằm trên cỏ",
+  "3692593096_fbaea67476": "một chiếc máy bay bay qua một chiếc sổ màu đỏ",
+  "339658315_fbb178c252": "hai chàng trai trẻ em trong một bức tường gỗ",
+  "2830869109_c4e403eae6": "một cô gái trong một chiếc áo sơ mi màu xanh và quần short màu xanh và một người phụ nữ",
+  "2666205903_8d287669e1": "một cô gái đang chơi với một con phố trong khi một người đàn ông khác đang đứng trên một con",
+  "3630641436_8f9ac5b9b2": "ba con chó đen và trắng đang chơi trong nước nông",
+  "2480850054_de3433b54a": "một người đàn ông trong bộ đồ tại một cây cầy",
+  "3244470342_c08f6bb17e": "một người trượt tuyết nhảy ra khỏi một tảng đá nông",
+  "3514179514_cbc3371b92": "một cầu thủ bóng chày đang chơi bóng chày",
+  "2396025708_e4a72e2558": "một người đàn ông trèo thiệt mặt con sóng",
+  "2594042571_2e4666507e": "một cậu bé mặc áo sơ mi xanh đang chơi với một cậu bé trong một chiếc sơn chơi",
+  "3569979711_6507841268": "một cậu bé làm một chiếc áo sơ mi màu xanh lá cây trên bãi biển",
+  "2683963310_20dcd5e566": "một em bé đang chơi với một con phố trong khi một chiếc áo sơ mi màu xanh lá cây trợ trời",
+  "3217910740_d1d61c08ab": "một nhóm trẻ em trong khi một người đàn ông trong khi một người đàn ông mặc áo sơ mi sen",
+  "3228069008_edb2961fc4": "một con chó nâu và trắng đang đứng trên một con đường cạnh một con chó nâu",
+  "2949982320_c704b31626": "một cậu bé trên một chiếc xe đạp đang thực hiện một thuyệt trên một đoạn đường đối",
+  "2715035273_8fc8b1291c": "một cô gái đi bộ trên đường phố",
+  "1433142189_cda8652603": "người đàn ông đi bộ đường dài đi bộ trên một con đường phố",
+  "1131932671_c8d17751b3": "một cậu bé nhảy trên một chiếc sổ màu xanh lá cây trên sân dâu",
+  "3521374954_37371b49a4": "một cậu bé mặc áo sơ mi đen và quần short màu xanh và một cậu bé trong khi một thuộn",
+  "3155451946_c0862c70cb": "cầu thủ bóng dầu trong màu cam đang chơi bóng dầu trong một trận nhảy",
+  "2924259848_effb4dcb82": "một người đàn ông mặc đồ xanh lá cây đang đi xe máy qua một con đường đua",
+  "2484190118_e89363c465": "một cậu bé mặc áo sơ mi xanh đang đứng trên một cái gì đó trong không khí",
+  "1224851143_33bcdd299c": "một cậu bé mặc áo sơ mi xanh đang mỉm cười trong một bàn trong khi một cậu bé màu xanh",
+  "872622575_ba1d3632cc": "một nhà leo núi đang ngồi trên một tảng đá trong khi một ngọn núi",
+  "3427118504_93126c83e0": "một cậu bé mặc áo sơ mi xanh đang đứng trước một bức tường với một người đàn ông khác chép trợt thựa cười cùng",
+  "256085101_2c2617c5d0": "một con chó nâu và trắng chạy trên cỏ",
+  "2061354254_faa5bd294b": "một cậu bé mặc áo sơ mi đen đang đứa trên con đường cỏ xanh",
+  "533713007_bf9f3e25b4": "một cậu bé mặc áo sơ mi xanh và đội mũ bảo hiểm đi bộ bên cạnh một cậu bé trong",
+  "3214885227_2be09e7cfb": "một người đàn ông trèo trên một chiếc cổ màu xanh và một chiếc cổ màu xanh và màu xanh lên ngờn",
+  "2061144717_5b3a1864f0": "hai người đang đi bộ trên một con phố thành phố",
+  "561417861_8e25d0c0e8": "một người đàn ông mặc áo khoác màu xanh đang đi bộ qua cầu trên một chiếc xe đạp màu cáo bợn",
+  "3332467180_d72f9b067d": "một người đàn ông mặc áo sơ mi xanh đang đứng trước một tòa nhà bên ngoài cổ",
+  "3482974845_db4f16befa": "hai con chó đen và trắng chạy trên bãi biển cạnh một bãi biển",
+  "114051287_dd85625a04": "một cô gái đang ngồi trên một chiếc xe màu đỏ",
+  "3295680663_af21ea648b": "một cậu bé đội mũ bảo hiểm đi xe đạp của mình trên một chiếc xe đạp đang đi xe đạp",
+  "3729525173_7f984ed776": "một cậu bé mặc áo sơ mi xanh đang ngồi trên bức tường trước một bài nhà màu đen",
+  "2813992915_f732cf8539": "một cậu bé đang thực hiện một thuyệt trên một chiếc xe đạp của mình trong không khí",
+  "3708177171_529bb4ff1d": "một cậu bé đang trượt ván trượt của mình trên một đoạn đường nối",
+  "3725202807_12fbfdd207": "một cặp vợ chồng bộ đồ đen đang đứng trên một chiếc xe máy màu đỏ",
+  "2657484284_daa07a3a1b": "hai người trèo thuyền kẹ ạc một chiếc sồn màu xanh và một chiếc sồn màu xanh lá cây trên mặt",
+  "880220939_0ef1c37f1f": "một nhóm các cờ dâu trong trang phục cô dây trong một chiếc váy màu đỏ",
+  "2774430374_fee1d793e7": "một cậu bé mặc áo sơ mi màu đỏ đứng trên bãi biển cạnh một quả bóng chày",
+  "3192266178_f9bf5d3dba": "một người đàn ông và một con chó đang chơi với một con chó trong khi một con chó đang",
+  "2311690895_0d6efe11c8": "một con chó nâu đang trong một chiếc áo sơ mi màu nâu và trắng trên một con chó nâu",
+  "261490838_2f3ac98b12": "một con chó chạy qua một con chó nâu",
+  "3480051754_18e5802558": "một nhóm người đang đứng trên một tấm cảm trong khi một người đàn ông trèo ra khỏi một cọ",
+  "254295381_d98fa049f4": "một con chó đen và trắng đang chạy qua một con chó màu đỏ",
+  "2878190821_6e4e03dc5f": "một cậu bé mặc áo sơ mi xanh đang đứng trên cỏ với một chiếc xe màu xanh lá cây trợn",
+  "2307118114_c258e3a47e": "một người đàn ông mặc áo sơ mi đăng và đội mũ bóng trẻ màu đen và đội mũ cam",
+  "3635577874_48ebaac734": "một người đàn ông thực hiện một thuyệt trên chiếc xe đạp của mình trong không khí",
+  "2884301336_dc8e974431": "một con chó trắng và nâu đang chạy qua một hồ bơi trong miệng của nó",
+  "2398605966_1d0c9e6a20": "hai con chó đang chơi trong tuyết",
+  "2581066814_179d28f306": "hai phụ nữ trong chiếc xe đạp màu xanh lá cây đang đi xe đạp trên đường phố",
+  "3385246141_a263d1053e": "một người trượt tuyết nhảy ra khỏi một bức tường qua không khí",
+  "2918769188_565dd48060": "một cậu bé trong một bộ đồ bơi trong một hồ bơi",
+  "3254817653_632e840423": "một nhóm người đứng trước một tòa nhà bên ngoài",
+  "3044536048_e615466e7f": "một người đàn ông mặc quần short màu xanh và trắng đang trèo ra khỏi một con sóng trệ",
+  "3107513635_fe8a21f148": "một nhóm chảnh trẻ đang đi bộ trên một chiếc xe buýt",
+  "3135504530_0f4130d8f8": "hai châu á chàng trai trẻ với mái tóc đầu trong khi một người phụ nữ châu á có mái ảnh cuồng",
+  "3364151356_eecd07a23e": "một con chó dám nắng chạy qua một cánh đồng cọ",
+  "2774554310_007e980a90": "một người phụ nữ đeo kính rơm ngồi trên băng ghế trong khi một chiếc váy màu xanh lá cây",
+  "2577972703_a22c5f2a87": "một cô gái trong một chiếc áo sơ mi màu hồng trong một chiếc xe tay màu đen trong mái anh",
+  "241347204_007d83e252": "một nhóm các cầu thủ bóng đá mặc đồng phục màu đỏ và trắng đang chạy",
+  "70995350_75d0698839": "một người đàn ông đang trèo trên mặt nước một chiếc sổ màu đen và trong không khí",
+  "909808296_23c427022d": "một con chó nhỏ màu nâu và trắng đang đi bộ trên một con chó xám",
+  "3613800013_5a54968ab0": "một con chó chạy qua cọp",
+  "757046028_ff5999f91b": "một cậu bé đang chơi trong một cậu bé dọc theo một cậu bé rút",
+  "2544426580_317b1f1f73": "một cậu bé mặc áo sơ mi xanh đang ngồi trên ván trượt một chiếc xe bên cạnh một một bờ",
+  "2901880865_3fd7b66a45": "một người trượt tuyết bay qua một con sóng lớn không chung",
+  "2648165716_02e2e74fd6": "một cậu bé mặc áo sư mi màu xanh và đội mũ ca màu xanh lá cây và màu đỏ",
+  "3398746625_5199beea71": "một người phụ nữ trẻ của mình trên bãi biển cạnh một bãi biển",
+  "2759860913_f75b39d783": "một người đàn ông trong bộ đồ tám đang đứng trên một chiếc áo sơ mi màu vàng trong một ngọn đối cượng nữa",
+  "2343525685_3eba3b6686": "một người đàn ông mặc áo sơ mi xanh đang leo lên một bức tường bá áo sơ mi màu đỏ",
+  "3437147889_4cf26dd525": "hai chiếc xe máy màu xanh lá cây trong một chiếc xe máy màu xanh lá cây trên một con đường đuổi hương",
+  "3030294889_78b2ccbe51": "hai người đang trong bộ đồ trắng trong khi một người đàn ông trong khi một người đàn ông cười",
+  "2968182121_b3b491df85": "một con chó săn đang chạy trên một con đường đua",
+  "3217266166_4e0091860b": "hai đứa trẻ đứng trên đường phố",
+  "2529116152_4331dabf50": "một người đàn ông mặc áo sơ mi trắng và đội mũ cam dô kính râm nhảy",
+  "3627011534_485f667b10": "một cô gái trẻ mặc áo sơ mi màu hồng trắng và đội mũ bảo hiểm trong một chiếc áo sơ mùng",
+  "888425986_e4b6c12324": "một cậu bé đang nhảy trong không khí",
+  "3450874870_c4dcf58fb3": "một người trượt tuyết mặc áo khoác màu đen và đội mũ bảo hiểm đi xuống một ngọn đồi tuyết",
+  "247704641_d883902277": "một con chó đen vài trắng đang đứng trên mặt nước",
+  "2289068031_fe26990183": "một người đàn ông mặc áo sơ mi xanh trên một chiếc xe máy của mình trong không khí",
+  "2603792708_18a97bac97": "một nhóm người đang trên bãi biển cạnh một bãi biển cạnh một bãi biển cạnh một bãi biển",
+  "3397220683_4aca010f86": "một người trượt tuyết màu đen trong một con chó màu nâu và trắng trong tuyết",
+  "3694093650_547259731e": "một nhóm người đứng trên một con phố thành phố",
+  "670609997_5c7fdb3f0b": "một con chó đen bắt một quả bóng màu đỏ và trắng trong không khí",
+  "3256275785_9c3af57576": "một người phụ nữ mặc quần jean và trắng đang nhảy lên không chung chung băng gỗ",
+  "542179694_e170e9e465": "một nhóm các cầu chạy bên ngoài một chiếc xe đạp của họ trên một con chó đi bộ",
+  "3670907052_c827593564": "một người đi xe máy trong không khí",
+  "2616643090_4f2d2d1a44": "một cậu bé mặc áo sơ mi màu xanh đang chơi với một con chó nâu trong khi một ngọn đội",
+  "2831217847_555b2f95ca": "một chiếc xe tải màu xanh đi dọc theo một chiếc xuồng màu xanh lá cây",
+  "2549968784_39bfbe44f9": "một cậu bé mặc áo phăng và đội mũ đen với mái tóc màu xanh lá cây với màu xanh vạt",
+  "757332692_6866ae545c": "một con chó con chó của mình trên một con chó nâu và trắng trong khi một người phụ nữ",
+  "491405109_798222cfd0": "một cô gái với mái tóc nâu đang trước một chiếc áo sơ mi màu xanh lá cây trên một chiếc",
+  "494921598_af73bda568": "hai cầu thủ khúc côn cầu trên băng",
+  "1317292658_ba29330a0b": "một cậu bé chơi trong một đài phun nước",
+  "2078311270_f01c9eaf4c": "hai phụ nữ trẻ đi bộ trên một con đường phố",
+  "2505988632_9541f15583": "một cô gái nhảy qua một bãi biển",
+  "3009644534_992e9ea2a7": "một con chó chạy qua cọp",
+  "486917990_72bd4069af": "một người đàn ông mặc áo sơ mi xanh và đội mũ bảo hiểm màu đen và trắng leo lên một",
+  "463978865_c87c6ca84c": "một người đàn ông mặc áo sơ mi xanh đi bộ bên cạnh một con phố đằng đường phố",
+  "3316725440_9ccd9b5417": "một người đàn ông mặc áo khoác màu đỏ và đội mũ bảo hiểm đi xe đạp màu đen đi xe đạp",
+  "384577800_fc325af410": "một con chó nâu và trắng chạy trong tuyết",
+  "2862004252_53894bb28b": "một con chó dám nắng chạy qua một cánh đồng cỏ",
+  "3317073508_7e13565c1b": "một cầu thủ bóng đá trong màu đỏ và trắng đang chơi bóng đá",
+  "1107246521_d16a476380": "một con chó đen chơi với một quả bóng màu xanh và con chó nâu và trên cỏ",
+  "909191414_1cf5d85821": "hai đứa trẻ đang chơi trong một chiếc xe tải màu đỏ trong một bãi cỏ",
+  "505929313_7668f021ab": "một con chó đèn với cổ áo sơ mi sáng trong miệng của nó trong miệng",
+  "279728508_6bd7281f3c": "hai chàng trai trẻ đang nhảy qua một công viên",
+  "415793623_6c1225ae27": "một người đàn ông mặc áo sơ mi xanh và đội mũ bảo hiểm màu xanh lá cây cầu lên một tả",
+  "758921886_55a351dd67": "một cô gái với mái tóc đầu đen trong một chiếc áo sơ mi màu xanh lá cây đỏ",
+  "3537400880_8f410d747d": "một cô gái nhảy trên tấm bạc lò xo",
+  "3484832904_08619300d9": "một cô gái trong một trận bóng chày",
+  "3114944484_28b5bb9842": "một nhóm người phụ nữ trong trang phục màu đỏ và trắng chạy trong một chiếc áo sơ mi màu và mồng",
+  "3582742297_1daa29968e": "hai con chó đen và trắng đang chơi trong một con chó khác nhau",
+  "293879742_5fe0ffd894": "một con chó nâu nhảy lên không chung bên cạnh một con chó khác"
+}
+  };
+</script>
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f5f5f5; }
+    .nav-tabs .nav-link { color: #555; font-weight: 500; }
+    .nav-tabs .nav-link.active { color: #0d6efd; font-weight: 700; }
+    table img { border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,.15); max-width: 220px; min-width: 180px; }
+    audio { display: block; margin: 4px auto; }
+    th { background: #f0f4ff; }
+    .loading { color: #aaa; font-size: .85em; }
+  </style>
 </head>
+<body>
+<div class="container py-4">
 
+  <!-- Header -->
+  <div class="shadow-lg p-4 mb-4 bg-white rounded text-center">
+    <h2>Dual-Support Mechanism with Visual Saliency Guidance and<br>Auxiliary Acoustic Loss for Image-to-Speech Generation</h2>
+    <p class="mb-2"><b>Chung Tran</b> &nbsp;·&nbsp; <b>Sakriani Sakti</b> &nbsp;(NAIST)</p>
+    <hr>
+    <p class="text-muted mb-0" style="max-width:820px;margin:auto;font-size:.95em;line-height:1.7;">
+      Image-to-Speech is the task of generating spoken descriptions directly from images, without relying on intermediate text.
+      The model produces natural speech that describes the visual content of an image in an end-to-end fashion,
+      capturing objects, actions, and scene context. This demo presents audio samples generated by our proposed system
+      alongside those from baseline models, evaluated across multiple languages and datasets to demonstrate
+      the model's generalization capability.
+    </p>
+  </div>
 
-<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+  <!-- Tabs -->
+  <ul class="nav nav-tabs mb-0 px-2 bg-white rounded-top shadow-sm" id="mainTabs">
+    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-comparison">🔍 Comparison</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-english">🇺🇸 SpokenCOCO English</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-japanese">🇯🇵 Stair Japanese</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-vietnamese">🇻🇳 Flickr8k Vietnamese</button></li>
+  </ul>
 
-<div class="container" >
-<header role="banner">
-</header>
-<main role="main">
-<article itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="tab-content shadow-lg bg-white rounded-bottom p-4 mb-5">
 
-<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h1 id="introduction" style="text-align: center;">
-		Dual-Support Mechanism with Visual Saliency Guidance and <br>
-		Auxiliary Acoustic Loss for Image-to-Speech Generation
-	</h1>
-	<p style="text-align: center;"> <b>Chung Tran (tran.quang_chung.tq9@naist.ac.jp)</b>, <b>Sakriani Sakti (ssakti@is.naist.jp)</b>
-</div>
-<div class="container pt-3 pb-3 shadow-sm p-3 bg-white rounded">
-	<h3 id="introduction" style="text-align: center">
-      Comparison of Systems on Descriptiveness
-	</h3>
-	<h6 id="introduction" style="text-align: center">
-		This demo showcases the comparison of different systems (SAT-VQ3-FT, Im2Sp, and our proposed model) for generating speech from images.
-	</h6>
-</div>
-<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h5 id="samples" style="text-align: center;"> Samples from SpokenCOCO </h5>
-	<p style="text-align: center; vertical-align: middle;">
-	<br> Audio is transcribed using an off-the-shelf ASR model. <br>
-		However, ASR Transcription may contain minor errors, such as transcribing "bowl/bawl" instead of "ball" and "refragerator" instead of "refrigerator."
-	<br> <b><span style="color: red;">Therefore, we strongly recommend listening to the audio rather than reading the text. </span></b>
-	</p>
-	<div class="table-responsive">
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th style="text-align: center">Image ID</th>
-					<th style="text-align: center">Image</th>
-					<th style="text-align: center">SAT-VQ3-FT</th>
-					<th style="text-align: center">Im2Sp</th>
-					<th style="text-align: center">Ours</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">3233</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/3233.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/3233.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/3233.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/3233.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a plastic tray with fruit sitting on top </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a plate topped with a bejes ennable of food </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a tray with a banana and other foods on it </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">16622</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/16622.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/16622.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/16622.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/16622.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a street sign and a street sign </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> i street sign ony wouldn't post it ony sign </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a sign on a post in a field near a road </td>
-				</tr>
+    <!-- TAB 1: Comparison -->
+    <div class="tab-pane fade show active" id="tab-comparison">
+      <h5 class="text-center mb-1">Comparison of Systems on Descriptiveness</h5>
+      <p class="text-center small text-muted">Audio transcribed by ASR — minor errors may exist.<br>
+        <b class="text-danger">We strongly recommend listening to the audio rather than reading the text.</b></p>
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">21549</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/21549.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/21549.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/21549.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/21549.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a small kitchen with a red in and in </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a kitchen sink in a counter with a ball of wine </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a kitchen with a sink and an open refragerator </td>
-				</tr>
+      <h6 class="mt-3 mb-2 text-center">Samples from SpokenCOCO</h6>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center">
+          <thead><tr><th>ID</th><th>Image</th><th>SAT-VQ3-FT</th><th>Im2Sp</th><th>Ours</th></tr></thead>
+          <tbody id="tb-spokencoco"></tbody>
+        </table>
+      </div>
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">13471</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/13471.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/13471.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/13471.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/13471.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a man sitting on a bench on the beach </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> an old photo of a couple of couple on a bench </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> two people sitting on a bench overlooking ocean </td>
-				</tr>
+      <h6 class="mt-4 mb-2 text-center">Samples from Flickr8k</h6>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center">
+          <thead><tr><th>ID</th><th>Image</th><th>Im2Sp</th><th>Ours</th></tr></thead>
+          <tbody id="tb-flickr8k"></tbody>
+        </table>
+      </div>
+    </div>
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">4882</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/4882.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/4882.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/4882.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/4882.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a man sitting at a table eating pizza </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man taking a picture of a piza on a table </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man taking a picture of a pizza with a camera </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">8309</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/8309.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/8309.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/8309.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/8309.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a couple of cars sitting on the side of a street </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a red motor cycle parked in a parking lot </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a motorcycleist parked in a parking lot neckt to cars </td>
-				</tr>
+    <!-- TAB 2: SpokenCOCO English -->
+    <div class="tab-pane fade" id="tab-english">
+      <h5 class="text-center mb-1">SpokenCOCO English</h5>
+      <p class="text-center small text-muted">English speech generated from MS-COCO images (SpokenCOCO dataset)</p>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center">
+          <thead><tr><th>Image ID</th><th>Image</th><th>Generated Speech</th><th>ASR Transcript</th></tr></thead>
+          <tbody id="tb-english"><tr><td colspan="4" class="loading">Loading transcripts…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">18302</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/18302.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/18302.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/18302.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/18302.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a man is standing on a tennis court </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man in a black shirt is playing tennis </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man standing on a tennis court with a racket </td>
-				</tr>
+    <!-- TAB 3: Stair Japanese -->
+    <div class="tab-pane fade" id="tab-japanese">
+      <h5 class="text-center mb-1">Stair Japanese</h5>
+      <p class="text-center small text-muted">Japanese speech generated from MS-COCO images (STAIR-Captions dataset)</p>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center">
+          <thead><tr><th>Image ID</th><th>Image</th><th>Generated Speech</th><th>ASR Transcript (漢字)</th></tr></thead>
+          <tbody id="tb-japanese"><tr><td colspan="4" class="loading">Loading transcripts…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">30773</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/30773.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/30773.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/30773.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/30773.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a bike parked on the side of a city street </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a bicycle parked on a sidewalk in a road </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a bicycle parked on the side of the street next to a bus </td>
-				</tr>
+    <!-- TAB 4: Flickr8k Vietnamese -->
+    <div class="tab-pane fade" id="tab-vietnamese">
+      <h5 class="text-center mb-1">Flickr8k Vietnamese</h5>
+      <p class="text-center small text-muted">Vietnamese speech generated from Flickr8k images</p>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center">
+          <thead><tr><th>Image ID</th><th>Image</th><th>Generated Speech</th><th>ASR Transcript</th></tr></thead>
+          <tbody id="tb-vietnamese"><tr><td colspan="4" class="loading">Loading transcripts…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">23024</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/23024.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/23024.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/23024.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/23024.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a dog walking in a dog holding a yellow frisbee </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a brown and white dog holding a frisby in his mouth </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a brown and white dog holding a yellow frisbee in its mouth </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">19877</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/19877.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/19877.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/19877.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/19877.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a large body of water with boats sitting on the water </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a boat in a river with buildings in the background </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a harbour with many boats on the water </td>
-				</tr>
-
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">26030</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/26030.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/26030.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/26030.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/26030.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a couple of cows standing in the grass </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a brown cow with a cow and a cow </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a baby cow and a baby calf in a field </td>
-				</tr>
-
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">155</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/155.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/155.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/155.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/155.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a small airplane sitting on the grass </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> an airplane is parked on the grass </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a small airplane that is flying in the grass </td>
-				</tr>
-				
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">6515</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/6515.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/6515.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/6515.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/6515.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a parking meter on the side of the road </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a parking meeter sitting on a street </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a parking meter next to a fence on the side wall </td>
-				</tr>
-				
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">15061</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/15061.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/15061.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/15061.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/15061.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a man riding a wave on a surfboard </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a surfer riding a wave on a surfboard </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a surfer riding a wave in the ocean </td>
-				</tr>
-				
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">24752</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/24752.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/24752.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/24752.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/24752.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a large red bus on the side of the road </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a small bus is going down a street </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a small bus traveling down a street next to a tree </td>
-				</tr>
-				
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">26166</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/26166.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/26166.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/26166.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/26166.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a man standing next to a white frisbee </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man holding a frisby in his hand </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man holding a white frisbee on a side wall </td>
-				</tr>
-				
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">27582</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/27582.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/27582.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/27582.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/27582.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a large cat sitting on a couch </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> an orange cat plays with ta cat on the floor </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> an orange cat laying on the floor next to her mouse </td>
-				</tr>
-				
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">29172</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/29172.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/29172.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/29172.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/29172.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>the large brown bears in the water </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a polar bear is playing with the ball in his ball </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> two polar bears in the water with a bowl in the background </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">1686</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/1686.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/1686.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/1686.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/1686.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a man riding skis down a snowy slope </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a woman is going down a snowy slope </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a person riding skis down a snow covered slope </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">11809</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/11809.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SAT-VQ3-FT/11809.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Im2Sp/11809.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/SIU_Transformer/11809.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> <b><sup>*</sup></b>a man standing in the grass with a ball </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a black and white dog jumping over a frispy </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a woman jumps to catch a frisbee in front of a crowd </td>
-				</tr>
-				
-			</tbody>
-		</table>
-	</div>
-	<br>
+  </div>
 </div>
 
-<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h5 id="samples" style="text-align: center;"> Samples from Flickr8k </h5>
-	<br>
-	<div class="table-responsive">
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th style="text-align: center">Image ID</th>
-					<th style="text-align: center">Image</th>
-					<th style="text-align: center">Im2Sp</th>
-					<th style="text-align: center">Ours</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7254</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/422763475_0bc814dac6.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/422763475_0bc814dac6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/422763475_0bc814dac6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a person running together in the snow </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man walking through the snow wearing a blue jacket and brown doll </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7428</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/247704641_d883902277.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/247704641_d883902277.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/247704641_d883902277.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a black and brown dog walking on a long tree branch in the water </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a black and brown dog standing on a log over a fallen tree in the water </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7567</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/2170222061_e8bce4a32d.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/2170222061_e8bce4a32d.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/2170222061_e8bce4a32d.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a brown and white cow jumping in a grassy field </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a brown and white dog jasses a bull through a grassy field </td>
-				</tr>
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7495</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/170100272_d820db2199.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/170100272_d820db2199.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/170100272_d820db2199.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a girl is riding on a slide slide in a park </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a boy slides down a slide in a playground </td>
-				</tr>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// ── Helpers ──────────────────────────────────────────────────────────────────
+const aud = (src) => `<audio controls style="width:230px"><source src="${src}">No audio support.</audio>`;
+const img = (src) => `<img src="${src}">`;
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7999</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/3490736665_38710f4b91.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/3490736665_38710f4b91.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/3490736665_38710f4b91.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a dog is playing with a tennis ball in his hand </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a brown and white dog jumps up to catch tennis bawls in middair </td>
-				</tr>
+// Parse "ID|transcript" text file into a Map
+function parseTxt(text) {
+  const map = new Map();
+  text.trim().split('\n').forEach(line => {
+    const i = line.indexOf('|');
+    if (i > -1) map.set(line.slice(0, i).trim(), line.slice(i + 1).trim());
+  });
+  return map;
+}
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7808</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/791338571_7f38510bf7.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/791338571_7f38510bf7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/791338571_7f38510bf7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a black and white cow standing next to a car </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a black cow stands in front of a car </td>
-				</tr>
+async function loadTxt(path) {
+  try {
+    const r = await fetch(path);
+    if (!r.ok) throw new Error(r.status);
+    return parseTxt(await r.text());
+  } catch (e) {
+    console.warn('Could not load', path, e);
+    return new Map();
+  }
+}
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7735</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/3061481868_d1e00b1f2e.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/3061481868_d1e00b1f2e.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/3061481868_d1e00b1f2e.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> two people riding on a motorcycle down the road </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a man rides a motorcycle on the street </td>
-				</tr>
+// ── TAB 1: Hardcoded comparison data ─────────────────────────────────────────
+const scRows = [
+  {id:"3233", sat:"a plastic tray with fruit sitting on top", im2sp:"a plate topped with a bejes ennable of food", ours:"a tray with a banana and other foods on it"},
+  {id:"16622", sat:"a street sign and a street sign", im2sp:"i street sign ony wouldn't post it ony sign", ours:"a sign on a post in a field near a road"},
+  {id:"21549", sat:"a small kitchen with a red in and in", im2sp:"a kitchen sink in a counter with a ball of wine", ours:"a kitchen with a sink and an open refragerator"},
+  {id:"13471", sat:"a man sitting on a bench on the beach", im2sp:"an old photo of a couple of couple on a bench", ours:"two people sitting on a bench overlooking ocean"},
+  {id:"4882",  sat:"a man sitting at a table eating pizza", im2sp:"a man taking a picture of a piza on a table", ours:"a man taking a picture of a pizza with a camera"},
+  {id:"8309",  sat:"a couple of cars sitting on the side of a street", im2sp:"a red motor cycle parked in a parking lot", ours:"a motorcycleist parked in a parking lot neckt to cars"},
+  {id:"18302", sat:"a man is standing on a tennis court", im2sp:"a man in a black shirt is playing tennis", ours:"a man standing on a tennis court with a racket"},
+  {id:"30773", sat:"a bike parked on the side of a city street", im2sp:"a bicycle parked on a sidewalk in a road", ours:"a bicycle parked on the side of the street next to a bus"},
+  {id:"23024", sat:"a dog walking in a dog holding a yellow frisbee", im2sp:"a brown and white dog holding a frisby in his mouth", ours:"a brown and white dog holding a yellow frisbee in its mouth"},
+  {id:"19877", sat:"a large body of water with boats sitting on the water", im2sp:"a boat in a river with buildings in the background", ours:"a harbour with many boats on the water"},
+  {id:"26030", sat:"a couple of cows standing in the grass", im2sp:"a brown cow with a cow and a cow", ours:"a baby cow and a baby calf in a field"},
+  {id:"155",   sat:"a small airplane sitting on the grass", im2sp:"an airplane is parked on the grass", ours:"a small airplane that is flying in the grass"},
+  {id:"6515",  sat:"a parking meter on the side of the road", im2sp:"a parking meeter sitting on a street", ours:"a parking meter next to a fence on the side wall"},
+  {id:"15061", sat:"a man riding a wave on a surfboard", im2sp:"a surfer riding a wave on a surfboard", ours:"a surfer riding a wave in the ocean"},
+  {id:"24752", sat:"a large red bus on the side of the road", im2sp:"a small bus is going down a street", ours:"a small bus traveling down a street next to a tree"},
+  {id:"26166", sat:"a man standing next to a white frisbee", im2sp:"a man holding a frisby in his hand", ours:"a man holding a white frisbee on a side wall"},
+  {id:"27582", sat:"a large cat sitting on a couch", im2sp:"an orange cat plays with ta cat on the floor", ours:"an orange cat laying on the floor next to her mouse"},
+  {id:"29172", sat:"the large brown bears in the water", im2sp:"a polar bear is playing with the ball in his ball", ours:"two polar bears in the water with a bowl in the background"},
+  {id:"1686",  sat:"a man riding skis down a snowy slope", im2sp:"a woman is going down a snowy slope", ours:"a person riding skis down a snow covered slope"},
+  {id:"11809", sat:"a man standing in the grass with a ball", im2sp:"a black and white dog jumping over a frispy", ours:"a woman jumps to catch a frisbee in front of a crowd"},
+];
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7892</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/3225310099_d8e419ba56.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/3225310099_d8e419ba56.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/3225310099_d8e419ba56.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a boat that is on a boat in the water </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a group of people are sailwaiting in front of the ocean </td>
-				</tr>
+const f8Rows = [
+  {id:"422763475_0bc814dac6",  im2sp:"a person running together in the snow", ours:"a man walking through the snow wearing a blue jacket and brown doll"},
+  {id:"247704641_d883902277",  im2sp:"a black and brown dog walking on a long tree branch in the water", ours:"a black and brown dog standing on a log over a fallen tree in the water"},
+  {id:"2170222061_e8bce4a32d", im2sp:"a brown and white cow jumping in a grassy field", ours:"a brown and white dog jasses a bull through a grassy field"},
+  {id:"170100272_d820db2199",  im2sp:"a girl is riding on a slide slide in a park", ours:"a boy slides down a slide in a playground"},
+  {id:"3490736665_38710f4b91", im2sp:"a dog is playing with a tennis ball in his hand", ours:"a brown and white dog jumps up to catch tennis bawls in middair"},
+  {id:"791338571_7f38510bf7",  im2sp:"a black and white cow standing next to a car", ours:"a black cow stands in front of a car"},
+  {id:"3061481868_d1e00b1f2e", im2sp:"two people riding on a motorcycle down the road", ours:"a man rides a motorcycle on the street"},
+  {id:"3225310099_d8e419ba56", im2sp:"a boat that is on a boat in the water", ours:"a group of people are sailwaiting in front of the ocean"},
+  {id:"2480327661_fb69829f57", im2sp:"a boy wearing a blue back red collar", ours:"a little boy wearing a white suit and black shop stands on a wooden floor"},
+  {id:"350443876_c9769f5734",  im2sp:"a woman plays with a child on a ladder", ours:"a little boy is climbing on a ladder and playing on a blue roote"},
+  {id:"3701291852_373ea46bb6", im2sp:"two children play in a lake", ours:"a boy walks along the water near the water"},
+];
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7874</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/2480327661_fb69829f57.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/2480327661_fb69829f57.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/2480327661_fb69829f57.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a boy wearing a blue back red collar </td>
-					<td	style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a little boy wearing a white suit and black shop stands on a wooden floor </td>
-				</tr>
+const tbSC = document.getElementById('tb-spokencoco');
+scRows.forEach(r => {
+  tbSC.innerHTML += `
+    <tr>
+      <td rowspan="2">${r.id}</td>
+      <td rowspan="2">${img('images/'+r.id+'.jpg')}</td>
+      <td>${aud('audios/SAT-VQ3-FT/'+r.id+'.wav')}</td>
+      <td>${aud('audios/Im2Sp/'+r.id+'.wav')}</td>
+      <td>${aud('audios/SIU_Transformer/'+r.id+'.wav')}</td>
+    </tr>
+    <tr>
+      <td><small><sup>*</sup>${r.sat}</small></td>
+      <td><small>${r.im2sp}</small></td>
+      <td><small>${r.ours}</small></td>
+    </tr>`;
+});
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7505</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/350443876_c9769f5734.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/350443876_c9769f5734.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/350443876_c9769f5734.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a woman plays with a child on a ladder </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a little boy is climbing on a ladder and playing on a blue roote </td>
-				</tr>
+const tbF8 = document.getElementById('tb-flickr8k');
+f8Rows.forEach(r => {
+  tbF8.innerHTML += `
+    <tr>
+      <td rowspan="2">${r.id}</td>
+      <td rowspan="2">${img('images/Flickr8k/'+r.id+'.jpg')}</td>
+      <td>${aud('audios/Flickr8k/Im2Sp/'+r.id+'.wav')}</td>
+      <td>${aud('audios/Flickr8k/SIU_Transformer/'+r.id+'.wav')}</td>
+    </tr>
+    <tr>
+      <td><small>${r.im2sp}</small></td>
+      <td><small>${r.ours}</small></td>
+    </tr>`;
+});
 
-				<tr>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center">7962</td>
-					<td rowspan="2"; style="vertical-align: middle; text-align: center"><img src="images/Flickr8k/3701291852_373ea46bb6.jpg" style="min-width: 240px;"/></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/Im2Sp/3701291852_373ea46bb6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					<td style="vertical-align: middle; text-align: center"> <b>Generated Speech:</b><br> <audio controls="controls" style="width: 260px;"><source src="audios/Flickr8k/SIU_Transformer/3701291852_373ea46bb6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-				</tr>
-				<tr>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> two children play in a lake </td>
-					<td style="vertical-align: middle; text-align: center"> <b>ASR Transcription:</b><br> a boy walks along the water near the water </td>
-				</tr>
+// ── TAB 2-4: Dynamic load from transcript files ───────────────────────────────
 
+// Set to a number to limit rows per tab (for debugging), or Infinity for all
+const DEBUG_LIMIT = 100;
 
-			</tbody>
-		</table>
-	</div>
-	<br>
-</div>
+// IDs are derived entirely from transcript file keys — no hardcoding
+function renderSingleModelTab(tbodyId, dir, transcripts) {
+  const tb = document.getElementById(tbodyId);
+  tb.innerHTML = '';
+  if (transcripts.size === 0) {
+    tb.innerHTML = '<tr><td colspan="4" class="text-danger text-center">Could not load transcript file.</td></tr>';
+    return;
+  }
+  let count = 0;
+  transcripts.forEach((text, id) => {
+    if (count++ >= DEBUG_LIMIT) return;
+    const shortId = id.replace('COCO_val2014_000000', '').replace(/^0+/, '') || id;
+    tb.innerHTML += `
+      <tr>
+        <td>${shortId}</td>
+        <td>${img(dir + id + '.jpg')}</td>
+        <td>${aud(dir + id + '.wav')}</td>
+        <td><small>${text}</small></td>
+      </tr>`;
+  });
+}
 
+// Read from window.TRANSCRIPTS injected by build.py (works with file://)
+// Falls back to fetch() if running via HTTP server
+function objToMap(obj) {
+  return new Map(Object.entries(obj || {}));
+}
 
-	
-</article>
-</main>
-</div>
+function renderAll(enMap, jaMap, viMap) {
+  renderSingleModelTab('tb-english',    'images/SpokenCoco_English/',  enMap);
+  renderSingleModelTab('tb-japanese',   'images/Stair_Japanese/',      jaMap);
+  renderSingleModelTab('tb-vietnamese', 'images/Flickr8k_Vietnamese/', viMap);
+}
 
+if (window.TRANSCRIPTS) {
+  // Embedded via build.py — works with file://
+  renderAll(
+    objToMap(window.TRANSCRIPTS.en),
+    objToMap(window.TRANSCRIPTS.ja),
+    objToMap(window.TRANSCRIPTS.vi)
+  );
+} else {
+  // Fallback: fetch from server (requires HTTP)
+  Promise.all([
+    loadTxt('images/SpokenCoco_English/transcript_ars_whisper_large_v3.txt'),
+    loadTxt('images/Stair_Japanese/transcript_whisper_kanji.txt'),
+    loadTxt('images/Flickr8k_Vietnamese/transcript_whisper.txt'),
+  ]).then(([enMap, jaMap, viMap]) => renderAll(enMap, jaMap, viMap));
+}
+</script>
 </body>
 </html>
