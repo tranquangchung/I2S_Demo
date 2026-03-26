@@ -719,7 +719,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 // ── Helpers ──────────────────────────────────────────────────────────────────
-const aud = (src) => `<audio controls style="width:230px"><source src="${src}">No audio support.</audio>`;
+// const aud = (src) => `<audio controls style="width:230px"><source src="${src}">No audio support.</audio>`;
+const aud = (src) => `<audio controls preload="none" style="width:230px"><source src="${src}">No audio support.</audio>`;
 const img = (src) => `<img src="${src}">`;
 
 // Parse "ID|transcript" text file into a Map
